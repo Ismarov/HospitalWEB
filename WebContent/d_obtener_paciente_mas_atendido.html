@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+        <title>Sistema de reservas</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+        <link rel="stylesheet" href="css/pure/pure-min.css">
+        <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+        <!--
+        <link rel="stylesheet" href="css/layouts/navbar.css">
+        -->
+        <!--<![endif]-->
+    </head>
+    <body>
+        <div class="">
+            <div class="n-home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+                <a class="pure-menu-heading" href="d_index.html">Sistema De Reservas</a>
+            </div>
+        </div>
+        <div id="layout">
+            <!-- Menu toggle -->
+            <a href="#menu" id="menuLink" class="menu-link">
+                <!-- Hamburger icon -->
+                <span></span>
+            </a>
+            <div id="menu">
+                <div class="pure-menu">
+                    <a class="pure-menu-heading" href="#">Director</a>
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="d_porcentaje_box.html" class="pure-menu-link">Porcentaje de Uso de Box </a></li>
+                        <li class="pure-menu-item"><a href="d_porcentaje_medico.html" class="pure-menu-link">% Ocupación de Médico</a></li>
+                        <li class="pure-menu-item"><a href="d_ver_medico_mas_solicitado.html" class="pure-menu-link">Médico más Solicitado</a></li>
+                        <li class="pure-menu-item"><a href="d_obtener_paciente_mas_atendido.html" class="pure-menu-link">Pacientes más Atendidos</a></li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="header">
+                <h2>Obtener Reporte</h2>
+            </div>
+            <div class="content">
+                <h2 class="content-subhead">Pacientes Más Atendido</h2>
+                <div class="pure-g">
+                    <div class="pure-u-1-2">
+                        <label for="datetimepicker1">Desde:</label>
+                        <br>
+                        <div>
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pure-u-1-2">
+                        <label for="datetimepicker2">Hasta:</label>
+                        <br>
+                        <div class='input-group date' id='datetimepicker2'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <button class="pure-button pure-button-primary">Obtener Reporte</button>
+                </div>
+                <hr>
+                <table class="pure-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                            <th>Telefono</th>
+                            <th>Ciudad</th>
+                            <th>Email</th>
+                            <th>Reservas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ismaelito</td>
+                            <td>Enfermito</td>
+                            <td>23423434</td>
+                            <td>Temuco</td>
+                            <td>ismagae@gmail.com</td>
+                            <th>5</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="js/ui.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/moment/moment.min.js"></script>
+        <script src="js/moment/es.js"></script>
+        <script src="js/datetime_picker/bootstrap-datetimepicker.js"></script>
+        <script rsc="js/hospital/p_reserva_hora_aps.js"></script>
+        <!-- hablilitar datepicker -->
+        <script type="text/javascript">
+        $(function () {
+        $('#datetimepicker1').datetimepicker();
+        $('#datetimepicker2').datetimepicker();
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+ * -- LAYOUT STYLES --
+ * These are some useful classes which I will need
+ */
+.l-box {
+    padding: 1em;
+}
+
+.l-box-lrg {
+    padding: 2em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.is-center {
+    text-align: center;
+}
+
+
+/*
+ * -- MENU STYLES --
+ * I want to customize how my .pure-menu looks at the top of the page
+ */
+
+.n-home-menu {
+    padding: 0.5em;
+    text-align: left;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+.n-home-menu {
+    background: #2d3e50;
+}
+
+.n-home-menu .pure-menu-heading {
+    text-align: left;
+}
+
+.n-home-menu .pure-menu.pure-menu-fixed {
+    /* Fixed menus normally have a border at the bottom. */
+    border-bottom: none;
+    /* I need a higher z-index here because of the scroll-over effect. */
+    z-index: 4;
+}
+
+.n-home-menu .pure-menu-selected a {
+    color: white;
+}
+
+.n-home-menu a {
+    color: #6FBEF3;
+}
+.n-home-menu li a:hover,
+.n-home-menu li a:focus {
+    background: none;
+    border: none;
+    color: #AECFE5;
+}
