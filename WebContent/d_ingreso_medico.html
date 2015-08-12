@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+        <title>Sistema de reservas</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+        <link rel="stylesheet" href="css/pure/pure-min.css">
+        <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+        <!--
+        <link rel="stylesheet" href="css/layouts/navbar.css">
+        -->
+        <!--<![endif]-->
+    </head>
+    <body>
+        <div class="">
+            <div class="n-home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+                <a class="pure-menu-heading" href="d_index.html">Sistema De Reservas</a>
+            </div>
+        </div>
+        <div id="layout">
+            <!-- Menu toggle -->
+            <a href="#menu" id="menuLink" class="menu-link">
+                <!-- Hamburger icon -->
+                <span></span>
+            </a>
+            <div id="menu">
+                <div class="pure-menu">
+                    <a class="pure-menu-heading" href="#">Director</a>
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="d_porcentaje_box.html" class="pure-menu-link">Ingresar Paciente </a></li>
+                        <li class="pure-menu-item"><a href="d_porcentaje_medico.html" class="pure-menu-link">Ingresar Médico</a></li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="header">
+                <h2>Ingreso de datos</h2>
+            </div>
+            <div class="content">
+                <h2 class="content-subhead">Ingresar Médico</h2>
+                <div class="pure-g">
+                    <div class="pure-u-1-2">
+                        <br>
+                        <div>
+                            <fieldset>
+                                <div class="pure-control-group">
+                                    <label name="nombres"for="Nombres">Nombres</label><br>
+                                    <input id="nombres" type="text" placeholder="Nombres">
+                                </div>
+
+                                <div class="pure-control-group">
+                                    <label name="apellidos"for="Apellidos">Apellidos</label><br>
+                                    <input id="apellidos" placeholder="Apellidos">
+                                </div>
+
+                                <div class="pure-control-group">
+                                    <label name="rut" for="RUT">RUT</label><br>
+                                    <input id="rut" placeholder="RUT">
+                                </div>
+
+                                <div class="pure-control-group">
+                                   <label name="f_nac" for="datetimepicker1">Fecha de nacimiento</label>
+			                        <br>
+			                        <div>
+			                            <div class='input-group date' id='datetimepicker1'>
+			                                <input type='text' class="form-control" />
+			                                <span class="input-group-addon">
+			                                    <span class="glyphicon glyphicon-calendar"></span>
+			                                </span>
+			                            </div>
+			                        </div>
+                                </div>
+
+                                <div class="pure-control-group">
+                                    <label name="telefono" for="Telefono">Telefono</label><br>
+                                    <input id="telefono" type="text" placeholder="Telefono">
+                                </div>
+                                    </label>
+
+                                <div class="pure-control-group">
+                                    <label name="direccion" for="Direccion">Dirección</label><br>
+                                    <input id="direccion" type="text" placeholder="Dirección">
+                                </div>
+
+                                <div class="pure-control-group">
+                                    <label name="ciudad" for="Ciudad">Ciudad</label><br>
+                                    <input id="ciudad" type="text" placeholder="Ciudad">
+                                </div>
+
+                                <div class="pure-control-group">
+                                    <label name="email" for="Email">Email</label><br>
+                                    <input id="email" type="email" placeholder="Email">
+                                </div>
+
+                                <div class="pure-control-group">
+                                    <label name="idEspecialidad" for="Especialidad">Especialidad</label><br>
+                                    <input id="idEspecialidad" placeholder="Especialidad">
+                                </div>
+
+                                <div class="pure-control-group">
+                                    <label name="activo" for="Activo">Activo</label><br>
+                                    <input id="activo" placeholder="Activo">
+                                </div>
+
+                                                  <form class="pure-form pure-form-aligned">
+                                    <br><button type="submit" class="pure-button pure-button-primary">Ingresar</button>
+                                </div>
+                            </fieldset>
+                        </form>  
+                </div>
+                <hr>
+            </div>
+        </div>
+        <script src="js/ui.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/moment/moment.min.js"></script>
+        <script src="js/moment/es.js"></script>
+        <script src="js/datetime_picker/bootstrap-datetimepicker.js"></script>
+        <script src="js/hospital/d_medico_solicitado.js"></script>
+        <!-- hablilitar datepicker -->
+        <script type="text/javascript">
+        $(function () {
+        $('#datetimepicker1').datetimepicker();
+        $('#datetimepicker2').datetimepicker();
+        });
+        </script>
+    </body>
+</html>
