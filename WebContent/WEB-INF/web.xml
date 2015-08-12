@@ -157,4 +157,24 @@
     <servlet-name>ObtenerPacientesMasAtendidos</servlet-name>
     <url-pattern>/ObtenerPacientesMasAtendidos</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SIngresarPaciente</display-name>
+    <servlet-name>SIngresarPaciente</servlet-name>
+    <servlet-class>servlet.director.SIngresarPaciente</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SIngresarPaciente</servlet-name>
+    <url-pattern>/SIngresarPaciente</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SIngresarMedico</display-name>
+    <servlet-name>SIngresarMedico</servlet-name>
+    <servlet-class>servlet.director.SIngresarMedico</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SIngresarMedico</servlet-name>
+    <url-pattern>/SIngresarMedico</url-pattern>
+  </servlet-mapping>
 </web-app>
