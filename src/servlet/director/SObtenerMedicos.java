@@ -37,7 +37,8 @@ public class SObtenerMedicos extends HttpServlet {
 		String s =  respObtMedico.get_return();
 		
 		request.setAttribute("Especialidades", s);
-		getServletContext().getRequestDispatcher("/pEspecialidades.jsp").forward(request, response);
+		response.getWriter().append(String.valueOf(s));
+		//getServletContext().getRequestDispatcher("/pEspecialidades.jsp").forward(request, response);
 	}
 
 }

@@ -52,9 +52,9 @@
             <div class="content">
                 <h2 class="content-subhead">Obtener Porcentaje de Uso de Box</h2>
                 <hr>
-                <label for="selectBox">Box:</label>
+                <label for="selectBoxes">Box:</label>
                 <br>
-                <select id="selectBox">
+                <select id="selectBoxes">
                     <option value="-1">-Seleccione un Box-</option>
                 </select>
                 <div class="pure-g">
@@ -81,9 +81,9 @@
                         </div>
                     </div>
                 </div>
-                <button class="pure-button pure-button-primary">Obtener Reporte</button>
+                <button id="btnReporte" class="pure-button pure-button-primary">Obtener Reporte</button>
                 <hr>
-                <table class="pure-table">
+                <table id="tablePorcentaje" class="pure-table">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -95,7 +95,7 @@
                         <tr>
                             <td>1</td>
                             <td>Box General</td>
-                            <th>50</th>
+                            <td>50</td>
                         </tr>
                     </tbody>
                 </table>
@@ -109,7 +109,7 @@
 <script src="js/moment/moment.min.js"></script>
 <script src="js/moment/es.js"></script>
 <script src="js/datetime_picker/bootstrap-datetimepicker.js"></script>
-<script rsc="js/hospital/p_reserva_hora_aps.js"></script>
+<script src="js/hospital/d_porcentaje_box.js"></script>
 <!-- hablilitar datepicker -->
 <script type="text/javascript">
 $(function () {

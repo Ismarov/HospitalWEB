@@ -37,7 +37,8 @@ public class SObtenerBox extends HttpServlet {
 		
 		String s= obBoxResponse.get_return();
 		   request.setAttribute("boxes", s);
-		   getServletContext().getRequestDispatcher("/dBoxs.jsp").forward(request, response);
+		   response.getWriter().append(s);
+		   //getServletContext().getRequestDispatcher("/dBoxs.jsp").forward(request, response);
 	}
 
 }
