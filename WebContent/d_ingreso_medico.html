@@ -57,28 +57,29 @@
                     <div class="pure-u-1-2">
                         <br>
                         <div>
+                        	<form id="medicoForm" class="pure-form pure-form-aligned">
                             <fieldset>
                                 <div class="pure-control-group">
-                                    <label name="nombres"for="Nombres">Nombres</label><br>
-                                    <input id="nombres" type="text" placeholder="Nombres">
+                                    <label for="Nombres">Nombres</label><br>
+                                    <input name="nombres"id="nombres" type="text" placeholder="Nombres">
                                 </div>
 
                                 <div class="pure-control-group">
-                                    <label name="apellidos"for="Apellidos">Apellidos</label><br>
-                                    <input id="apellidos" placeholder="Apellidos">
+                                    <label for="Apellidos">Apellidos</label><br>
+                                    <input name="apellidos"id="apellidos" placeholder="Apellidos">
                                 </div>
 
                                 <div class="pure-control-group">
-                                    <label name="rut" for="RUT">RUT</label><br>
-                                    <input id="rut" placeholder="RUT">
+                                    <label for="RUT">RUT</label><br>
+                                    <input name="rut" id="rut" placeholder="RUT">
                                 </div>
 
                                 <div class="pure-control-group">
-                                   <label name="f_nac" for="datetimepicker1">Fecha de nacimiento</label>
+                                   <label for="datetimepicker1">Fecha de nacimiento</label>
 			                        <br>
 			                        <div>
 			                            <div class='input-group date' id='datetimepicker1'>
-			                                <input type='text' class="form-control" />
+			                                <input name="f_nac" type='text' class="form-control" />
 			                                <span class="input-group-addon">
 			                                    <span class="glyphicon glyphicon-calendar"></span>
 			                                </span>
@@ -87,41 +88,40 @@
                                 </div>
 
                                 <div class="pure-control-group">
-                                    <label name="telefono" for="Telefono">Telefono</label><br>
-                                    <input id="telefono" type="text" placeholder="Telefono">
+                                    <label for="Telefono">Telefono</label><br>
+                                    <input name="telefono" id="telefono" type="text" placeholder="Telefono">
                                 </div>
                                     </label>
 
                                 <div class="pure-control-group">
-                                    <label name="direccion" for="Direccion">Dirección</label><br>
-                                    <input id="direccion" type="text" placeholder="Dirección">
+                                    <label for="Direccion">Dirección</label><br>
+                                    <input name="direccion" id="direccion" type="text" placeholder="Dirección">
                                 </div>
 
                                 <div class="pure-control-group">
-                                    <label name="ciudad" for="Ciudad">Ciudad</label><br>
-                                    <input id="ciudad" type="text" placeholder="Ciudad">
+                                    <label for="Ciudad">Ciudad</label><br>
+                                    <input name="ciudad" id="ciudad" type="text" placeholder="Ciudad">
                                 </div>
 
                                 <div class="pure-control-group">
-                                    <label name="email" for="Email">Email</label><br>
-                                    <input id="email" type="email" placeholder="Email">
+                                    <label for="Email">Email</label><br>
+                                    <input name="email" id="email" type="email" placeholder="Email">
                                 </div>
 
                                 <div class="pure-control-group">
-                                    <label name="idEspecialidad" for="Especialidad">Especialidad</label><br>
-                                    <input id="idEspecialidad" placeholder="Especialidad">
+                                    <label for="Especialidad">Especialidad</label><br>
+                                    <input name="idEspecialidad" id="idEspecialidad" placeholder="Especialidad">
                                 </div>
 
                                 <div class="pure-control-group">
-                                    <label name="activo" for="Activo">Activo</label><br>
-                                    <input id="activo" placeholder="Activo">
+                                    <label for="Activo">Activo</label><br>
+                                    <input name="activo" id="activo" placeholder="Activo">
                                 </div>
 
-                                                  <form class="pure-form pure-form-aligned">
-                                    <br><button type="submit" class="pure-button pure-button-primary">Ingresar</button>
                                 </div>
                             </fieldset>
-                        </form>  
+                        </form>
+                        <br><button id="btnIngresar" type="submit" class="pure-button pure-button-primary">Ingresar</button>
                 </div>
                 <hr>
             </div>
@@ -132,7 +132,7 @@
         <script src="js/moment/moment.min.js"></script>
         <script src="js/moment/es.js"></script>
         <script src="js/datetime_picker/bootstrap-datetimepicker.js"></script>
-        <script src="js/hospital/d_medico_solicitado.js"></script>
+        <script src="js/hospital/d_ingreso_medico.js"></script>
         <!-- hablilitar datepicker -->
         <script type="text/javascript">
         $(function () {
