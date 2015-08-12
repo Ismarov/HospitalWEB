@@ -159,22 +159,22 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>SIngresarPaciente</display-name>
-    <servlet-name>SIngresarPaciente</servlet-name>
+    <display-name>ingresarPaciente</display-name>
+    <servlet-name>ingresarPaciente</servlet-name>
     <servlet-class>servlet.director.SIngresarPaciente</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>SIngresarPaciente</servlet-name>
-    <url-pattern>/SIngresarPaciente</url-pattern>
+    <servlet-name>ingresarPaciente</servlet-name>
+    <url-pattern>/ingresarPaciente</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>SIngresarMedico</display-name>
-    <servlet-name>SIngresarMedico</servlet-name>
+    <display-name>ingresarMedico</display-name>
+    <servlet-name>ingresarMedico</servlet-name>
     <servlet-class>servlet.director.SIngresarMedico</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>SIngresarMedico</servlet-name>
-    <url-pattern>/SIngresarMedico</url-pattern>
+    <servlet-name>ingresarMedico</servlet-name>
+    <url-pattern>/ingresarMedico</url-pattern>
   </servlet-mapping>
 </web-app>

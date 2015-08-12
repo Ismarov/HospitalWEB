@@ -65,7 +65,7 @@ public class SIngresarPaciente extends HttpServlet {
 
 		request.setAttribute("ingresarPaciente", s);
 
-		response.getWriter().append(s);
+		response.getWriter().append(String.valueOf(s));
 		//getServletContext().getRequestDispatcher("/d_IngresarPaciente.jsp")
 				//.forward(request, response);
 	}
