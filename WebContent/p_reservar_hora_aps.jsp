@@ -40,10 +40,10 @@
 
     <div id="menu">
         <div class="pure-menu">
-            <a class="pure-menu-heading" href="p_index.html">Paciente</a>
+            <a class="pure-menu-heading" href="p_index.jsp">Paciente</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"  class="menu-item-divided pure-menu-selected"><a href="reservar_hora_aps.html" class="pure-menu-link">Reservar Hora APS</a></li>
+                <li class="pure-menu-item"  class="menu-item-divided pure-menu-selected"><a href="reservar_hora_aps.jsp" class="pure-menu-link">Reservar Hora APS</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">Ver horas reservadas</a></li>
             </ul>
         </div>

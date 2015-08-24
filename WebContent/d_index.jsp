@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
-        <title>Sistema de Reservas</title>
+        <title>Sistema de reservas</title>
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
         <link rel="stylesheet" href="css/pure/pure-min.css">
@@ -24,7 +24,7 @@
     <body>
         <div class="">
             <div class="n-home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-                <a class="pure-menu-heading" href="m_index.html">Sistema de Reservas</a>
+                <a class="pure-menu-heading" href="d_index.jsp">Sistema de Reportes</a>
             </div>
         </div>
         <div id="layout">
@@ -35,9 +35,14 @@
             </a>
             <div id="menu">
                 <div class="pure-menu">
-                    <a class="pure-menu-heading" href="#">Médico</a>
+                    <a class="pure-menu-heading" href="#">Director</a>
                     <ul class="pure-menu-list">
-                        <li class="pure-menu-item"><a href="m_consulta_reserva.html" class="pure-menu-link">Consultar Horas Reservadas</a></li>
+                        <li class="pure-menu-item"><a href="d_porcentaje_box.jsp" class="pure-menu-link">Porcentaje de Uso de Box </a></li>
+                        <li class="pure-menu-item"><a href="d_porcentaje_medico.jsp" class="pure-menu-link">% Ocupación de Médico</a></li>
+                        <li class="pure-menu-item"><a href="d_ver_medico_mas_solicitado.jsp" class="pure-menu-link">Médico más Solicitado</a></li>
+                        <li class="pure-menu-item"><a href="d_obtener_paciente_mas_atendido.jsp" class="pure-menu-link">Pacientes más Atendidos</a></li>
+                        <li class="pure-menu-item"><a href="d_ingreso_paciente.jsp" class="pure-menu-link">Ingresar Paciente </a></li>
+                        <li class="pure-menu-item"><a href="d_ingreso_medico.jsp" class="pure-menu-link">Ingresar Médico</a></li>
                     </li>
                 </ul>
             </div>
@@ -46,10 +51,10 @@
             <div class="content">
                 <div class="splash-container">
                     <div class="splash">
-                        <h1 class="splash-head">Sistema de Reserva Horaria Para Médicos Hospital San Carlos.</h1>
+                        <h1 class="splash-head">Sistema de Reportes Hospital San Carlos.</h1>
                         <p class="splash-subhead">
                             Al costado izquierdo es posible acceder a sus funciones.
-                            <img class="pure-img-responsive" src="img/1.jpg">
+                             <img class="pure-img-responsive" src="img/1.jpg">
                         </p>
                     </div>
                 </div>
@@ -58,10 +63,10 @@
         <script src="js/ui.js"></script>
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.js"></script>
-        <script src="js/mo
+        <script src="js/moment/moment.min.js"></script>
         <script src="js/moment/es.js"></script>
         <script src="js/datetime_picker/bootstrap-datetimepicker.js"></script>
-        <script rsc="js/hospital/p_reserva_hora_aps.js"></script>
+        <script src="js/hospital/p_reserva_hora_aps.js"></script>
         <!-- hablilitar datepicker -->
         <script type="text/javascript">
         $(function () {

@@ -1,10 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
         <title>Sistema de Reservas</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
         <link rel="stylesheet" href="css/pure/pure-min.css">
         <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -22,7 +27,7 @@
     <body>
         <div class="">
             <div class="n-home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-                <a class="pure-menu-heading" href="p_index.html">Sistema de Reserva</a>
+                <a class="pure-menu-heading" href="m_index.jsp">Sistema de Reservas</a>
             </div>
         </div>
         <div id="layout">
@@ -33,9 +38,9 @@
             </a>
             <div id="menu">
                 <div class="pure-menu">
-                    <a class="pure-menu-heading" href="#">Paciente</a>
+                    <a class="pure-menu-heading" href="#">MÃ©dico</a>
                     <ul class="pure-menu-list">
-                        <li class="pure-menu-item"><a href="p_reservar_hora_aps.html" class="pure-menu-link">Reservar Hora APS </a></li>
+                        <li class="pure-menu-item"><a href="m_consulta_reserva.jsp" class="pure-menu-link">Consultar Horas Reservadas</a></li>
                     </li>
                 </ul>
             </div>
@@ -44,7 +49,7 @@
             <div class="content">
                 <div class="splash-container">
                     <div class="splash">
-                        <h1 class="splash-head">Sistema de Reserva Horaria Para Pacientes Hospital San Carlos.</h1>
+                        <h1 class="splash-head">Sistema de Reserva Horaria Para MÃ©dicos Hospital San Carlos.</h1>
                         <p class="splash-subhead">
                             Al costado izquierdo es posible acceder a sus funciones.
                             <img class="pure-img-responsive" src="img/1.jpg">
@@ -56,5 +61,16 @@
         <script src="js/ui.js"></script>
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.js"></script>
+        <script src="js/moment/moment.min.js"></script>
+        <script src="js/moment/es.js"></script>
+        <script src="js/datetime_picker/bootstrap-datetimepicker.js"></script>
+        <script rsc="js/hospital/p_reserva_hora_aps.js"></script>
+        <!-- hablilitar datepicker -->
+        <script type="text/javascript">
+        $(function () {
+        $('#datetimepicker1').datetimepicker();
+        $('#datetimepicker2').datetimepicker();
+        });
+        </script>
     </body>
 </html>

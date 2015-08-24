@@ -24,7 +24,7 @@
     <body>
         <div class="">
             <div class="n-home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-                <a class="pure-menu-heading" href="d_index.html">Sistema De Reservas</a>
+                <a class="pure-menu-heading" href="d_index.jsp">Sistema De Reservas</a>
             </div>
         </div>
         <div id="layout">
@@ -37,12 +37,12 @@
                 <div class="pure-menu">
                     <a class="pure-menu-heading" href="#">Director</a>
                     <ul class="pure-menu-list">
-                        <li class="pure-menu-item"><a href="d_porcentaje_box.html" class="pure-menu-link">Porcentaje de Uso de Box </a></li>
-                        <li class="pure-menu-item"><a href="d_porcentaje_medico.html" class="pure-menu-link">% Ocupación de Médico</a></li>
-                        <li class="pure-menu-item"><a href="d_ver_medico_mas_solicitado.html" class="pure-menu-link">Médico más Solicitado</a></li>
-                        <li class="pure-menu-item"><a href="d_obtener_paciente_mas_atendido.html" class="pure-menu-link">Pacientes más Atendidos</a></li>
-                        <li class="pure-menu-item"><a href="d_ingreso_paciente.html" class="pure-menu-link">Ingresar Paciente </a></li>
-                        <li class="pure-menu-item"><a href="d_ingreso_medico.html" class="pure-menu-link">Ingresar Médico</a></li>
+                        <li class="pure-menu-item"><a href="d_porcentaje_box.jsp" class="pure-menu-link">Porcentaje de Uso de Box </a></li>
+                        <li class="pure-menu-item"><a href="d_porcentaje_medico.jsp" class="pure-menu-link">% Ocupación de Médico</a></li>
+                        <li class="pure-menu-item"><a href="d_ver_medico_mas_solicitado.jsp" class="pure-menu-link">Médico más Solicitado</a></li>
+                        <li class="pure-menu-item"><a href="d_obtener_paciente_mas_atendido.jsp" class="pure-menu-link">Pacientes más Atendidos</a></li>
+                        <li class="pure-menu-item"><a href="d_ingreso_paciente.jsp" class="pure-menu-link">Ingresar Paciente </a></li>
+                        <li class="pure-menu-item"><a href="d_ingreso_medico.jsp" class="pure-menu-link">Ingresar Médico</a></li>
                     </li>
                 </ul>
             </div>
@@ -52,13 +52,7 @@
                 <h2>Obtener Reporte</h2>
             </div>
             <div class="content">
-                <h2 class="content-subhead">Obtener Porcentaje de Ocupación de Médico</h2>
-                <hr>
-                <label for="selectMedico">Médico:</label>
-                <br>
-                <select id="selectMedico">
-                    <option value="-1">-Seleccione un Médico-</option>
-                </select>
+                <h2 class="content-subhead">Pacientes Más Atendido</h2>
                 <div class="pure-g">
                     <div class="pure-u-1-2">
                         <label for="datetimepicker1">Desde:</label>
@@ -82,46 +76,48 @@
                             </span>
                         </div>
                     </div>
+                    <button id="btnReporte" class="pure-button pure-button-primary">Obtener Reporte</button>
                 </div>
-                <button id="btnReporte" class="pure-button pure-button-primary">Obtener Reporte</button>
                 <hr>
-                <table id="tableMedicos" class="pure-table">
+                <table id="tablePacientes" class="pure-table">
                     <thead>
                         <tr>
                             <th>#</th>
                             <th>Nombre</th>
                             <th>Apellidos</th>
-                            <th>Especialidad</th>
-                            <th>Porcentaje</th>
+                            <th>Telefono</th>
+                            <th>Ciudad</th>
+                            <th>Email</th>
+                            <th>Reservas</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Juanito</td>
-                            <td>Medel</td>
-                            <td>Traumatologo</td>
-                            <th>75</th>
+                            <td>Ismaelito</td>
+                            <td>Enfermito</td>
+                            <td>23423434</td>
+                            <td>Temuco</td>
+                            <td>ismagae@gmail.com</td>
+                            <th>5</th>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
-</div>
-<script src="js/ui.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/moment/moment.min.js"></script>
-<script src="js/moment/es.js"></script>
-<script src="js/datetime_picker/bootstrap-datetimepicker.js"></script>
-<script src="js/hospital/d_porcentaje_medico.js"></script>
-<!-- hablilitar datepicker -->
-<script type="text/javascript">
-$(function () {
-$('#datetimepicker1').datetimepicker();
-$('#datetimepicker2').datetimepicker();
-});
-</script>
-</body>
+        <script src="js/ui.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/moment/moment.min.js"></script>
+        <script src="js/moment/es.js"></script>
+        <script src="js/datetime_picker/bootstrap-datetimepicker.js"></script>
+        <script src="js/hospital/d_paciente_atendido.js"></script>
+        <!-- hablilitar datepicker -->
+        <script type="text/javascript">
+        $(function () {
+        $('#datetimepicker1').datetimepicker();
+        $('#datetimepicker2').datetimepicker();
+        });
+        </script>
+    </body>
 </html>

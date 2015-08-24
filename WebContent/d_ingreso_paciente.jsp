@@ -24,7 +24,7 @@
     <body>
         <div class="">
             <div class="n-home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-                <a class="pure-menu-heading" href="d_index.html">Sistema De Reservas</a>
+                <a class="pure-menu-heading" href="d_index.jsp">Sistema De Reservas</a>
             </div>
         </div>
         <div id="layout">
@@ -37,12 +37,12 @@
                 <div class="pure-menu">
                     <a class="pure-menu-heading" href="#">Director</a>
                     <ul class="pure-menu-list">
-                    	<li class="pure-menu-item"><a href="d_porcentaje_box.html" class="pure-menu-link">Porcentaje de Uso de Box </a></li>
-                        <li class="pure-menu-item"><a href="d_porcentaje_medico.html" class="pure-menu-link">% Ocupación de Médico</a></li>
-                        <li class="pure-menu-item"><a href="d_ver_medico_mas_solicitado.html" class="pure-menu-link">Médico más Solicitado</a></li>
-                        <li class="pure-menu-item"><a href="d_obtener_paciente_mas_atendido.html" class="pure-menu-link">Pacientes más Atendidos</a></li>
-                        <li class="pure-menu-item"><a href="d_ingreso_paciente.html" class="pure-menu-link">Ingresar Paciente </a></li>
-                        <li class="pure-menu-item"><a href="d_ingreso_medico.html" class="pure-menu-link">Ingresar Médico</a></li>
+                        <li class="pure-menu-item"><a href="d_porcentaje_box.jsp" class="pure-menu-link">Porcentaje de Uso de Box </a></li>
+                        <li class="pure-menu-item"><a href="d_porcentaje_medico.jsp" class="pure-menu-link">% Ocupación de Médico</a></li>
+                        <li class="pure-menu-item"><a href="d_ver_medico_mas_solicitado.jsp" class="pure-menu-link">Médico más Solicitado</a></li>
+                        <li class="pure-menu-item"><a href="d_obtener_paciente_mas_atendido.jsp" class="pure-menu-link">Pacientes más Atendidos</a></li>
+                        <li class="pure-menu-item"><a href="d_ingreso_paciente.jsp" class="pure-menu-link">Ingresar Paciente </a></li>
+                        <li class="pure-menu-item"><a href="d_ingreso_medico.jsp" class="pure-menu-link">Ingresar Médico</a></li>
                     </li>
                 </ul>
             </div>
@@ -52,25 +52,25 @@
                 <h2>Ingreso de datos</h2>
             </div>
             <div class="content">
-                <h2 class="content-subhead">Ingresar Médico</h2>
+                <h2 class="content-subhead">Ingresar Paciente</h2>
                 <div class="pure-g">
                     <div class="pure-u-1-2">
                         <br>
                         <div>
-                        	<form id="medicoForm" class="pure-form pure-form-aligned">
+                        <form id="pacienteForm" class="pure-form pure-form-aligned">
                             <fieldset>
                                 <div class="pure-control-group">
                                     <label for="Nombres">Nombres</label><br>
-                                    <input name="nombres"id="nombres" type="text" placeholder="Nombres">
+                                    <input name="nombres" id="nombres" type="text" placeholder="Nombres">
                                 </div>
 
                                 <div class="pure-control-group">
                                     <label for="Apellidos">Apellidos</label><br>
-                                    <input name="apellidos"id="apellidos" placeholder="Apellidos">
+                                    <input name="apellidos" id="apellidos" placeholder="Apellidos">
                                 </div>
 
                                 <div class="pure-control-group">
-                                    <label for="RUT">RUT</label><br>
+                                    <label  for="RUT">RUT</label><br>
                                     <input name="rut" id="rut" placeholder="RUT">
                                 </div>
 
@@ -109,20 +109,16 @@
                                 </div>
 
                                 <div class="pure-control-group">
-                                    <label for="Especialidad">Especialidad</label><br>
-                                    <input name="idEspecialidad" id="idEspecialidad" placeholder="Especialidad">
-                                </div>
-
-                                <div class="pure-control-group">
                                     <label for="Activo">Activo</label><br>
                                     <input name="activo" id="activo" placeholder="Activo">
                                 </div>
 
+                                                  
                                 </div>
                             </fieldset>
-                        </form>
-                        <br><button id="btnIngresar" type="submit" class="pure-button pure-button-primary">Ingresar</button>
-                </div>
+                        </form>  
+                        <br><button id="btnIngresar" class="pure-button pure-button-primary">Ingresar</button>
+                	</div>
                 <hr>
             </div>
         </div>
@@ -132,7 +128,7 @@
         <script src="js/moment/moment.min.js"></script>
         <script src="js/moment/es.js"></script>
         <script src="js/datetime_picker/bootstrap-datetimepicker.js"></script>
-        <script src="js/hospital/d_ingreso_medico.js"></script>
+        <script src="js/hospital/d_ingreso_paciente.js"></script>
         <!-- hablilitar datepicker -->
         <script type="text/javascript">
         $(function () {

@@ -22,7 +22,7 @@
     <body>
         <div class="">
             <div class="n-home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-                <a class="pure-menu-heading" href="m_index.html">Sistema De Reservas</a>
+                <a class="pure-menu-heading" href="m_index.jsp">Sistema De Reservas</a>
             </div>
         </div>
         <div id="layout">
@@ -35,7 +35,7 @@
                 <div class="pure-menu">
                     <a class="pure-menu-heading" href="#">Médico</a>
                     <ul class="pure-menu-list">
-                        <li class="pure-menu-item"><a href="m_consulta_reserva.html" class="pure-menu-link">Consultar Horas Reservadas</a></li>
+                        <li class="pure-menu-item"><a href="m_consulta_reserva.jsp" class="pure-menu-link">Consultar Horas Reservadas</a></li>
                     </li>
                 </ul>
             </div>
