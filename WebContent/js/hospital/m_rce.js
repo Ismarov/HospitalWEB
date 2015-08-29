@@ -5,11 +5,12 @@ var url = "RseInsertar";
 // urls para obtener los tipos que serán options en el formulario.
 var opts = [
   //["id_select_tag", "url_servlet"]//
-	["actividades", "getActividades"],
-	["procedimientos", "getProcedimientos"],
+	["actividad_id", "getActividades"],
+	["procedimiento_id", "getProcedimientos"],
+	["diagnostico_id", "getDiagnosticos"]/*,
 	["tipos_cierre_clinico", "getTiposCierre"],
 	["destinos", "getDestinos"],
-	["tiempos_control", "getTiemposControl"]
+	["tiempos_control", "getTiemposControl"]*/
 ];
 
 $(document).ready(function(){
