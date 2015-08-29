@@ -45,6 +45,38 @@
 
         
            /**
+            * auto generated Axis2 call back method for ingresarPaciente method
+            * override this method for handling normal response from ingresarPaciente operation
+            */
+           public void receiveResultingresarPaciente(
+                    bussines.DirectorStub.IngresarPacienteResponse result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from ingresarPaciente operation
+           */
+            public void receiveErroringresarPaciente(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for ingresarMedico method
+            * override this method for handling normal response from ingresarMedico operation
+            */
+           public void receiveResultingresarMedico(
+                    bussines.DirectorStub.IngresarMedicoResponse result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from ingresarMedico operation
+           */
+            public void receiveErroringresarMedico(java.lang.Exception e) {
+            }
+                
+           /**
             * auto generated Axis2 call back method for obtenerBox method
             * override this method for handling normal response from obtenerBox operation
             */
@@ -90,6 +122,22 @@
            * override this method for handling error response from obtenerPorcentajeOcupacionBox operation
            */
             public void receiveErrorobtenerPorcentajeOcupacionBox(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for crearHoraMedica method
+            * override this method for handling normal response from crearHoraMedica operation
+            */
+           public void receiveResultcrearHoraMedica(
+                    bussines.DirectorStub.CrearHoraMedicaResponse result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from crearHoraMedica operation
+           */
+            public void receiveErrorcrearHoraMedica(java.lang.Exception e) {
             }
                 
            /**

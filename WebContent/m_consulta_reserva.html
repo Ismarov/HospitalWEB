@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+        <title>Sistema de reservas</title>
+        <link rel="stylesheet" href="css/pure/pure-min.css">
+        <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+        <!--
+        <link rel="stylesheet" href="css/layouts/navbar.css">
+        -->
+        <!--<![endif]-->
+    </head>
+    <body>
+        <div class="">
+            <div class="n-home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+                <a class="pure-menu-heading" href="m_index.jsp">Sistema De Reservas</a>
+            </div>
+        </div>
+        <div id="layout">
+            <!-- Menu toggle -->
+            <a href="#menu" id="menuLink" class="menu-link">
+                <!-- Hamburger icon -->
+                <span></span>
+            </a>
+            <div id="menu">
+                <div class="pure-menu">
+                    <a class="pure-menu-heading" href="#">Médico</a>
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="m_consulta_reserva.jsp" class="pure-menu-link">Consultar Horas Reservadas</a></li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="header">
+                <h2>Administrar horas</h2>
+            </div>
+            <div class="content">
+                <h2 class="content-subhead">Buscar disponibilidad horaria</h2>
+                <p>
+                    <div><!-- Inicio date time picker -->
+                    <label for="datetimepicker1">Desde:</label>
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                    </div> <!--Fin date time picker-->
+                </p>
+                <div><!-- Inicio date time picker -->
+                <label for="datetimepicker2">Hasta:</label>
+                <div class='input-group date' id='datetimepicker2'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+                </div> <!--Fin date time picker-->
+                <button id="btnBuscar"class="pure-button pure-button-primary">Buscar</button>
+                
+                <hr>
+
+                <div id="divHoras">
+                    <h2 class="content-subhead">Su disponibilidad horaria</h2>
+                    <p>
+                        <table id="tableHoras" class="pure-table"> <!--Inicio tabla-->
+                        <thead>
+                            <tr>
+                                <th>Seleccionar</th>
+                                <th>Fecha</th>
+                                <th>Medico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--
+                            <tr>
+                                <td><input type="checkbox" value=""><br></td>
+                                <td>28/05/2015</td>
+                                <td>None</td>
+                            </tr>
+                            -->
+                        </tbody>
+                        </table> <!-- Fin tabla -->
+                    </p>
+                    <hr>
+                    <div class="pure-form">
+                        <h2>Reservar hora para un paciente</h2>
+                        <h4>Ingrese código de paciente</h4>
+                        <input type="text" size="25" value="Código paciente"> <!-- Input codigo paciente -->
+                        <button class="pure-button pure-button-primary">Reservar hora</button>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/ui.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/moment/moment.min.js"></script>
+    <script src="js/moment/es.js"></script>
+    <script src="js/datetime_picker/bootstrap-datetimepicker.js"></script>
+    <script src="js/hospital/m_consulta_disponibilidad.js"></script>
+    <script type="text/javascript">
+    $(function () {
+    $('#datetimepicker1').datetimepicker();
+    $('#datetimepicker2').datetimepicker();
+    });
+    </script>
+</body>
+</html>
