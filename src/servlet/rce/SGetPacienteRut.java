@@ -1,4 +1,4 @@
-package servlet;
+package servlet.rce;
 
 import java.io.IOException;
 
@@ -8,21 +8,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import bussines.RceStub;
-import bussines.RceStub.ObtenerCierre_destino;
-import bussines.RceStub.ObtenerCierre_destinoResponse;
-import bussines.RceStub.ObtenerTiempo_control;
-import bussines.RceStub.ObtenerTiempo_controlResponse;
+import bussines.RceStub.ObtenerPacientePorRut;
+import bussines.RceStub.ObtenerPacientePorRutResponse;
 
 /**
- * Servlet implementation class SGetTiemposControl
+ * Servlet implementation class SGetPacienteRut
  */
-public class SGetTiemposControl extends HttpServlet {
+public class SGetPacienteRut extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SGetTiemposControl() {
+    public SGetPacienteRut() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,11 +30,12 @@ public class SGetTiemposControl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String rut = request.getParameter("rut");
 		RceStub rce = new RceStub();
-		ObtenerTiempo_control stGetTiemposControl = new ObtenerTiempo_control();
-		ObtenerTiempo_controlResponse res = rce.obtenerTiempo_control(stGetTiemposControl);
-		
-		response.getWriter().append(res.get_return());
+		ObtenerPacientePorRut stPaciente = new ObtenerPacientePorRut();
+		stPaciente.setRutIngresado(rut);
+		ObtenerPacientePorRutResponse res = rce.obtenerPacientePorRut(stPaciente);
+		response.getWriter().append(res.get_return());		
 	}
 
 }

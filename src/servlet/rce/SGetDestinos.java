@@ -1,4 +1,4 @@
-package servlet;
+package servlet.rce;
 
 import java.io.IOException;
 
@@ -8,21 +8,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import bussines.RceStub;
-import bussines.RceStub.ObtenerCierre_tipo;
-import bussines.RceStub.ObtenerCierre_tipoResponse;
-import bussines.RceStub.ObtenerDiagnostico;
-import bussines.RceStub.ObtenerDiagnosticoResponse;
+import bussines.RceStub.ObtenerCierre_destino;
+import bussines.RceStub.ObtenerCierre_destinoResponse;
 
 /**
- * Servlet implementation class SGetTiposCierre
+ * Servlet implementation class SGetDestinos
  */
-public class SGetTiposCierre extends HttpServlet {
+public class SGetDestinos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SGetTiposCierre() {
+    public SGetDestinos() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,8 +31,8 @@ public class SGetTiposCierre extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RceStub rce = new RceStub();
-		ObtenerCierre_tipo stGetTiposCierre = new ObtenerCierre_tipo();
-		ObtenerCierre_tipoResponse res = rce.obtenerCierre_tipo(stGetTiposCierre);
+		ObtenerCierre_destino stGetTiposDestino = new ObtenerCierre_destino();
+		ObtenerCierre_destinoResponse res = rce.obtenerCierre_destino(stGetTiposDestino);
 		
 		response.getWriter().append(res.get_return());
 	}

@@ -1,50 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
-
     <title>Sistema de reservas</title>
-    <link rel="stylesheet" href="css/pure/pure-min.css">
-    <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        
-        <link rel="stylesheet" href="css/layouts/side-menu.css">
-
-        <!--
-        <link rel="stylesheet" href="css/layouts/navbar.css">
-        -->
-    <!--<![endif]-->    
-
 </head>
 <body>
 
 <div class="">
-    <div class="n-home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Sistema De Reservas</a>
+    <div >
+        <a href="">Sistema De Reservas</a>
     </div>
 </div>
 
 <div id="layout">
-
-    <!-- Menu toggle -->
-    <a href="#menu" id="menuLink" class="menu-link">
-        <!-- Hamburger icon -->
-        <span></span>
-    </a>
-
+ 
     <div id="menu">
-        <div class="pure-menu">
-            <a class="pure-menu-heading" href="p_index.jsp">Paciente</a>
+        <div >
+            <a href="p_index.html">Paciente</a>
 
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"  class="menu-item-divided pure-menu-selected"><a href="reservar_hora_aps.jsp" class="pure-menu-link">Reservar Hora APS</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Ver horas reservadas</a></li>
+            <ul>
+                <li><a href="reservar_hora_aps.html">Reservar Hora APS</a></li>
+                <li><a href="#">Ver horas reservadas</a></li>
             </ul>
         </div>
     </div>
@@ -57,13 +34,13 @@
         <div class="content">
 
             <!-- Dos paneles de 1/2 -->
-            <h2 class="content-subhead">Seleccione especialidad y médico</h2>
+            <h2>Seleccione especialidad y médico</h2>
 
             <!-- una grilla -->
-            <div class="pure-g">
+            <div >
                 <!-- panel de 1/2 unidad-->
-                <div class="pure-u-1-2">
-                    <div class="pure-form">
+                <div >
+                    <div>
                         <label for="selectEspecialidad">Especialidad:</label>
                         <br>
                         <select id="selectEspecialidad">
@@ -72,9 +49,8 @@
                     </div>
                 </div>
                 <!-- panel de 1/2 unidad-->
-                <div class="pure-u-1-2">
-
-                    <div  id="divMedico" class="pure-form">
+                <div >
+                    <div  id="divMedico" >
                         <label for="selectMedico">Medico:</label>
                         <br>
                         <select id="selectMedico">
@@ -86,11 +62,12 @@
 
             <!-- Un panel -->
             <div  id="divHora">
-                <h2 class="content-subhead">Seleccione hora</h2>
-                <div class="pure-g">
-                    <div class="pure-u-1-1">
-
-                        <div class="pure-form">                    
+                <h2>Seleccione hora</h2>
+                <!-- grid-->
+                <div>
+                    <!-- span 1-->
+                    <div>
+                        <div>
                             <label for="selectHora">Horas:</label>
                             <br>
                             <select id="selectHora">
@@ -101,7 +78,7 @@
                     </div>
                     <!-- si pongo hr y el boton antes de cerrar el grid se va a la derecha -->
                     <hr>
-                    <button id="btnReservar" class="pure-button pure-button-primary">Reservar Hora</button>
+                    <button id="btnReservar">Reservar Hora</button>
                 </div>
             </div>
 
@@ -110,8 +87,6 @@
     </div>
 </div>
 
-
-<script src="js/ui.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/moment/moment.min.js"></script>

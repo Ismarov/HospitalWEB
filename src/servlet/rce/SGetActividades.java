@@ -1,4 +1,4 @@
-package servlet;
+package servlet.rce;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

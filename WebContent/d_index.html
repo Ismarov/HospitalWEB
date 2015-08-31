@@ -1,66 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
         <title>Sistema de reservas</title>
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-        <link rel="stylesheet" href="css/pure/pure-min.css">
-        <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         
-        <!--[if lte IE 8]>
-        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
-        <![endif]-->
-        <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="css/layouts/side-menu.css">
-        <!--
-        <link rel="stylesheet" href="css/layouts/navbar.css">
-        -->
-        <!--<![endif]-->
     </head>
     <body>
         <div class="">
-            <div class="n-home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-                <a class="pure-menu-heading" href="d_index.jsp">Sistema de Reportes</a>
+            <div>
+                <a href="d_index.html">Sistema De Reservas</a>
             </div>
         </div>
         <div id="layout">
-            <!-- Menu toggle -->
-            <a href="#menu" id="menuLink" class="menu-link">
-                <!-- Hamburger icon -->
-                <span></span>
-            </a>
+
             <div id="menu">
-                <div class="pure-menu">
-                    <a class="pure-menu-heading" href="#">Director</a>
-                    <ul class="pure-menu-list">
-                        <li class="pure-menu-item"><a href="d_porcentaje_box.jsp" class="pure-menu-link">Porcentaje de Uso de Box </a></li>
-                        <li class="pure-menu-item"><a href="d_porcentaje_medico.jsp" class="pure-menu-link">% Ocupación de Médico</a></li>
-                        <li class="pure-menu-item"><a href="d_ver_medico_mas_solicitado.jsp" class="pure-menu-link">Médico más Solicitado</a></li>
-                        <li class="pure-menu-item"><a href="d_obtener_paciente_mas_atendido.jsp" class="pure-menu-link">Pacientes más Atendidos</a></li>
-                        <li class="pure-menu-item"><a href="d_ingreso_paciente.jsp" class="pure-menu-link">Ingresar Paciente </a></li>
-                        <li class="pure-menu-item"><a href="d_ingreso_medico.jsp" class="pure-menu-link">Ingresar Médico</a></li>
+                <div>
+                    <a href="#">Director</a>
+                    <ul>
+                        <li><a href="d_porcentaje_box.html">Porcentaje de Uso de Box </a></li>
+                        <li><a href="d_porcentaje_medico.html">% Ocupación de Médico</a></li>
+                        <li><a href="d_ver_medico_mas_solicitado.html">Médico más Solicitado</a></li>
+                        <li><a href="d_obtener_paciente_mas_atendido.html">Pacientes más Atendidos</a></li>
+                        <li><a href="d_ingreso_paciente.html">Ingresar Paciente </a></li>
+                        <li><a href="d_ingreso_medico.html">Ingresar Médico</a></li>
                     </li>
                 </ul>
             </div>
         </div>
         <div id="main">
-            <div class="content">
-                <div class="splash-container">
-                    <div class="splash">
-                        <h1 class="splash-head">Sistema de Reportes Hospital San Carlos.</h1>
-                        <p class="splash-subhead">
+            <div>
+                <div>
+                    <div >
+                        <h1>Sistema de Reportes Hospital San Carlos.</h1>
+                        <p>
                             Al costado izquierdo es posible acceder a sus funciones.
-                             <img class="pure-img-responsive" src="img/1.jpg">
+                             <img src="img/1.jpg">
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="js/ui.js"></script>
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/moment/moment.min.js"></script>

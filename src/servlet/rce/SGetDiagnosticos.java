@@ -1,4 +1,4 @@
-package servlet;
+package servlet.rce;
 
 import java.io.IOException;
 
@@ -8,19 +8,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import bussines.RceStub;
-import bussines.RceStub.ObtenerProcedimiento;
-import bussines.RceStub.ObtenerProcedimientoResponse;
+import bussines.RceStub.ObtenerDiagnostico;
+import bussines.RceStub.ObtenerDiagnosticoResponse;
 
 /**
- * Servlet implementation class SGetProcedimientos
+ * Servlet implementation class SGetDiagnosticos
  */
-public class SGetProcedimientos extends HttpServlet {
+public class SGetDiagnosticos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SGetProcedimientos() {
+    public SGetDiagnosticos() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,8 +31,8 @@ public class SGetProcedimientos extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RceStub rce = new RceStub();
-		ObtenerProcedimiento stGetProcedimientos = new ObtenerProcedimiento();
-		ObtenerProcedimientoResponse res = rce.obtenerProcedimiento(stGetProcedimientos);
+		ObtenerDiagnostico stGetDiagnosticos = new ObtenerDiagnostico();
+		ObtenerDiagnosticoResponse res = rce.obtenerDiagnostico(stGetDiagnosticos);
 		
 		response.getWriter().append(res.get_return());
 	}

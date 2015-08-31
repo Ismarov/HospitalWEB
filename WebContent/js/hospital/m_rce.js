@@ -1,6 +1,9 @@
 //url del servlet que insertará el RCE
 var url = "RseInsertar";
 
+var params = [];
+
+
 // ids de los campos select asociados a las respectivas
 // urls para obtener los tipos que serán options en el formulario.
 var opts = [
@@ -14,6 +17,10 @@ var opts = [
 ];
 
 $(document).ready(function(){
+
+	// Leer parametros de la url
+	// acceder com myHosp.getParams() #=> Object
+	initMyHosp();
 	
 	// Llama a los servlets que consultan los tipos definidos en opts
 	// y luego crea el contenido de los select
@@ -39,6 +46,11 @@ $(document).ready(function(){
 	
 });
 
+function hiddenParams(){
+	$("#paciente_id").val(myHosp.getParams().idPaciente);
+	$("#horamedica_id").val(myHosp.getParams().idHora);
+}
+
 
 function consultarTipos(){
 	
@@ -62,6 +74,16 @@ function crearOptions(id, data){
 	}
 	$("#"+id).html(opt_str);
 }
+
+
+function certsArray(){
+	var certs = new Array();
+	$.each($("#form_certificado input[type=checkbox]:checked"), function(idx, el){
+		certs.push(parseInt( $(el).val() ));
+	});
+	return JSON.stringify(certs);
+}
+
 
 function validar(){
 	//Traer todos los input del form como array

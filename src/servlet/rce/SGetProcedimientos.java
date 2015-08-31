@@ -1,4 +1,4 @@
-package servlet;
+package servlet.rce;
 
 import java.io.IOException;
 
@@ -8,19 +8,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import bussines.RceStub;
-import bussines.RceStub.ObtenerRceDeUnPaciente;
-import bussines.RceStub.ObtenerRceDeUnPacienteResponse;
+import bussines.RceStub.ObtenerProcedimiento;
+import bussines.RceStub.ObtenerProcedimientoResponse;
 
 /**
- * Servlet implementation class SGetHcePaciente
+ * Servlet implementation class SGetProcedimientos
  */
-public class SGetHcePaciente extends HttpServlet {
+public class SGetProcedimientos extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SGetHcePaciente() {
+    public SGetProcedimientos() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,9 +31,8 @@ public class SGetHcePaciente extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RceStub rce = new RceStub();
-		ObtenerRceDeUnPaciente stRcePaciente = new ObtenerRceDeUnPaciente();
-		stRcePaciente.setIdPaciente(Integer.parseInt(request.getParameter("id")));
-		ObtenerRceDeUnPacienteResponse res = rce.obtenerRceDeUnPaciente(stRcePaciente);
+		ObtenerProcedimiento stGetProcedimientos = new ObtenerProcedimiento();
+		ObtenerProcedimientoResponse res = rce.obtenerProcedimiento(stGetProcedimientos);
 		
 		response.getWriter().append(res.get_return());
 	}

@@ -201,7 +201,7 @@
     <description></description>
     <display-name>SGetActividades</display-name>
     <servlet-name>SGetActividades</servlet-name>
-    <servlet-class>servlet.SGetActividades</servlet-class>
+    <servlet-class>servlet.rce.SGetActividades</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SGetActividades</servlet-name>
@@ -211,7 +211,7 @@
     <description></description>
     <display-name>SGetProcedimientos</display-name>
     <servlet-name>SGetProcedimientos</servlet-name>
-    <servlet-class>servlet.SGetProcedimientos</servlet-class>
+    <servlet-class>servlet.rce.SGetProcedimientos</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SGetProcedimientos</servlet-name>
@@ -221,7 +221,7 @@
     <description></description>
     <display-name>SGetDiagnosticos</display-name>
     <servlet-name>SGetDiagnosticos</servlet-name>
-    <servlet-class>servlet.SGetDiagnosticos</servlet-class>
+    <servlet-class>servlet.rce.SGetDiagnosticos</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SGetDiagnosticos</servlet-name>
@@ -231,7 +231,7 @@
     <description></description>
     <display-name>SGetTiposCierre</display-name>
     <servlet-name>SGetTiposCierre</servlet-name>
-    <servlet-class>servlet.SGetTiposCierre</servlet-class>
+    <servlet-class>servlet.rce.SGetTiposCierre</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SGetTiposCierre</servlet-name>
@@ -241,7 +241,7 @@
     <description></description>
     <display-name>SGetDestinos</display-name>
     <servlet-name>SGetDestinos</servlet-name>
-    <servlet-class>servlet.SGetDestinos</servlet-class>
+    <servlet-class>servlet.rce.SGetDestinos</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SGetDestinos</servlet-name>
@@ -251,7 +251,7 @@
     <description></description>
     <display-name>SGetTiemposControl</display-name>
     <servlet-name>SGetTiemposControl</servlet-name>
-    <servlet-class>servlet.SGetTiemposControl</servlet-class>
+    <servlet-class>servlet.rce.SGetTiemposControl</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SGetTiemposControl</servlet-name>
@@ -261,10 +261,40 @@
     <description></description>
     <display-name>SGetHcePaciente</display-name>
     <servlet-name>SGetHcePaciente</servlet-name>
-    <servlet-class>servlet.SGetHcePaciente</servlet-class>
+    <servlet-class>servlet.rce.SGetHcePaciente</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SGetHcePaciente</servlet-name>
     <url-pattern>/getHcePaciente</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SGetPacienteRut</display-name>
+    <servlet-name>SGetPacienteRut</servlet-name>
+    <servlet-class>servlet.rce.SGetPacienteRut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SGetPacienteRut</servlet-name>
+    <url-pattern>/getPacienteRut</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SObtenerHorasPaciente</display-name>
+    <servlet-name>SObtenerHorasPaciente</servlet-name>
+    <servlet-class>servlet.paciente.SObtenerHorasPaciente</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SObtenerHorasPaciente</servlet-name>
+    <url-pattern>/obtenerHorasPaciente</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SIngresarRce</display-name>
+    <servlet-name>SIngresarRce</servlet-name>
+    <servlet-class>servlet.rce.SIngresarRce</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SIngresarRce</servlet-name>
+    <url-pattern>/ingresarRce</url-pattern>
   </servlet-mapping>
 </web-app>
