@@ -2,40 +2,53 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
         <title>Sistema de Reservas</title>
+        <link rel="stylesheet" href="css/pure/pure-min.css">
+        <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+        <!--
+        <link rel="stylesheet" href="css/layouts/navbar.css">
+        -->
+        <!--<![endif]-->
     </head>
     <body>
-        <div class="">
-            <div >
-                <a href="p_index.html">Sistema de Reserva</a>
-            </div>
-        </div>
         <div id="layout">
- 
+            <!-- Menu toggle -->
+            <a href="#menu" id="menuLink" class="menu-link">
+                <!-- Hamburger icon -->
+                <span></span>
+            </a>
             <div id="menu">
-                <div >
-                    <a href="#">Paciente</a>
-                    <ul >
-                        <li ><a href="p_reservar_hora_aps.html" >Reservar Hora APS </a></li>
-                    </li>
-                </ul>
+                <div class="pure-menu">
+                    <a class="pure-menu-heading" href="p_index.html">Paciente</a>
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="p_reservar_hora_aps.html" class="pure-menu-link">Reservar Hora APS </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
-	        <div id="main">
-	            <div class="content">
-	                <div >
-	                    <div >
-	                        <h1 >Sistema de Reserva Horaria Para Pacientes Hospital San Carlos.</h1>
-	                        <p >
-	                            Al costado izquierdo es posible acceder a sus funciones.
-	                            <img src="img/1.jpg">
-	                        </p>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
+	   <div id="main">
+            <div class="content">
+                <div class="splash-container">
+                    <div class="splash">
+                        <h1 class="splash-head">Sistema de Reportes Hospital San Carlos.</h1>
+                            <p class="splash-subhead">
+                                Al costado izquierdo es posible acceder a sus funciones.
+                             <img class="pure-img-responsive" src="img/1.jpg">
+                        </p>
+                    </div>
+                </div>
+            </div>
 	    </div>
+        <script src="js/ui.js"></script>
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.js"></script>
     </body>

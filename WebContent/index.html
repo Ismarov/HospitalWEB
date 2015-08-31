@@ -1,19 +1,70 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Sistema de Reserva Hospital</title>
-</head>
-<body>
-<form action="p_index.jsp">
-    <input type="submit" value="Interfaz Paciente">
-</form>
-<form action="d_index.jsp">
-    <input type="submit" value="Interfaz Director">
-</form>
-<form action="m_index.jsp">
-    <input type="submit" value="Interfaz Medico">
-</form>
-
-</body>
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+        <title>Bienvenido al sistema de reservas</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+        <link rel="stylesheet" href="css/pure/pure-min.css">
+        <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+        <!--
+        <link rel="stylesheet" href="css/layouts/navbar.css">
+        -->
+        <!--<![endif]-->
+    </head>
+    <body>
+        <div id="layout">
+            <!-- Menu toggle -->
+            <a href="#menu" id="menuLink" class="menu-link">
+                <!-- Hamburger icon -->
+                <span></span>
+            </a>
+            <div id="menu">
+                <div class="pure-menu">
+                    <a class="pure-menu-heading" href="index.html">Hospital San Carlos</a>
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="p_index.html" class="pure-menu-link">Paciente</a></li>
+                        <li class="pure-menu-item"><a href="m_index.html" class="pure-menu-link">Médico</a></li>
+                        <li class="pure-menu-item"><a href="d_index.html" class="pure-menu-link">Director</a></li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="content">
+                <div class="splash-container">
+                    <div class="splash">
+                        <h1 class="splash-head">Bienvenido al sistema de reservas y reportes Hospital San Carlos.</h1>
+                        <p class="splash-subhead">
+                            Al costado izquierdo es posible acceder a sus funciones.
+                             <img class="pure-img-responsive" src="img/1.jpg">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/ui.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/moment/moment.min.js"></script>
+        <script src="js/moment/es.js"></script>
+        <script src="js/datetime_picker/bootstrap-datetimepicker.js"></script>
+        <script src="js/hospital/p_reserva_hora_aps.js"></script>
+        <!-- hablilitar datepicker -->
+        <script type="text/javascript">
+        $(function () {
+        $('#datetimepicker1').datetimepicker();
+        $('#datetimepicker2').datetimepicker();
+        });
+        </script>
+    </body>
 </html>
