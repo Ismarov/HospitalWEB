@@ -27,15 +27,24 @@ $(document).ready(function(){
 
 function llenarTabla(paciente){
 	var row = "";
-	row += "<tr>"+"<td>"+paciente.personavo.rut+"<td>"+"<td>"+paciente.personavo.nombres+"<td>"+"<td>"+paciente.personavo.apellidos+"<td>"+"<td><button class='btnHoras' data-id='"+paciente.id+"'>Ver Horas</button><td>";
+	row += "<tr>"+"<td>"+paciente.personavo.rut+"<td>"+"<td>"+paciente.personavo.nombres+"<td>"+"<td>"+paciente.personavo.apellidos+"<td>"+"<td><button class='btnHoras' data-id='"+paciente.id+"'>Ver Horas</button><td>"+"<td><button class='btnHce' data-id='"+paciente.id+"'>Ver HCE</button><td></tr>";
 	$("#table_paciente tbody").html("");
 	$("#table_paciente tbody").append(row);
 	evtHoras();
+	evtHce();
 }
 
 function evtHoras(){
 	$(".btnHoras").click(function(){
 		var url = "m_ver_horas_paciente.html?id="+$(this).data("id");
+		console.log("Redirecting: ", url)
+		window.location.replace(url);
+	});
+}
+
+function evtHce(){
+	$(".btnHce").click(function(){
+		var url = "m_hce.html?id="+$(this).data("id");
 		console.log("Redirecting: ", url)
 		window.location.replace(url);
 	});

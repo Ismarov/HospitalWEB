@@ -43,8 +43,8 @@
    <!--label for"horamedica_id">ID Hora Médica</label><br-->
    <input type="hidden" id="horamedica_id" name="horamedica_id" value="" >
    <br>
-   <label for"receta_id">ID Receta</label><br>
-   <input type="" id="receta_id" name="receta_id" value="" >
+   <!--label for"receta_id">ID Receta</label><br-->
+   <input type="hidden" id="receta_id" name="receta_id" value="0" >
    <br>
    <label for"diagnostico_id">Diagnostico</label><br>
    <select id="diagnostico_id" name="diagnostico_id"></select>
@@ -59,7 +59,7 @@
    <input type="hidden" id="paciente_id" name="paciente_id" value="" >
    <br>
    <!--label for"lCertificados">lCertificados</label><br-->
-   <input type="hidden" id="lCertificados" name="lCertificados" value="" >
+   <input type="hidden" id="lCertificados" name="lCertificados" value="[]" >
    <br>
 </form>
 
@@ -75,18 +75,18 @@
                
                <tr>
                   <td>
-                     <input type="checkbox" name="paci_ges">
+                     <input type="checkbox" name="p_ges" value=0>
                      Paciente GES
                   </td>
                   <td>
-                     <input type="checkbox" name="pat_ges">
+                     <input type="checkbox" name="p_pges" value=0>
                      Patología GES
                   </td>
                </tr>
                
                <tr>
                   <td>
-                     <input type="checkbox" name="paci_cron">
+                     <input type="checkbox" name="p_cron" value=0>
                      Paciente Crónico
                   </td>
                   <td>
@@ -96,7 +96,7 @@
 
                <tr>
                   <td>
-                     <textarea name="receta_texto" placeholder="Texto de la receta"></textarea>
+                     <textarea id="receta_desc" name="desc" placeholder="Texto de la receta"></textarea>
                   </td>
                   <td>
                      <!---->
@@ -119,84 +119,84 @@
 
             <tr>
                <td>
-                  <input type="checkbox" value=1 >
+                  <input type="checkbox" class="cert_chk" value=1 >
                   Alcoholemia
                </td>
                <td>
-                  <input type="checkbox" value=2 >
+                  <input type="checkbox" class="cert_chk" value=2 >
                   Drogas
                </td>
             </tr>
 
             <tr>
                <td>
-                  <input type="checkbox" value=3 >
+                  <input type="checkbox" class="cert_chk" value=3 >
                   Suicidio
                </td>
                <td>
-                  <input type="checkbox" value=4 >
+                  <input type="checkbox" class="cert_chk" value=4 >
                   Otros ML
                </td>
             </tr>
 
             <tr>
                <td>
-                  <input type="checkbox" value=5 >
+                  <input type="checkbox" class="cert_chk" value=5 >
                   Salud Compatible
                </td>
                <td>
-                  <input type="checkbox" value=6 >
+                  <input type="checkbox" class="cert_chk" value=6 >
                   Atención Profesional
                </td>
             </tr>
 
             <tr>
                <td>
-                  <input type="checkbox" value=7 >
+                  <input type="checkbox" class="cert_chk" value=7 >
                   Citación a KNT
                </td>
                <td>
-                  <input type="checkbox" value=8 >
+                  <input type="checkbox" class="cert_chk" value=8 >
                   Orden Citación
                </td>
             </tr>
 
             <tr>
                <td>
-                  <input type="checkbox" value=9 >
+                  <input type="checkbox" class="cert_chk" value=9 >
                   V Intrafamiliar
                </td>
                <td>
-                  <input type="checkbox" value=10 >
+                  <input type="checkbox" class="cert_chk" value=10 >
                   Lesiones
                </td>
             </tr>
 
             <tr>
                <td>
-                  <input type="checkbox" value=11 >
+                  <input type="checkbox" class="cert_chk" value=11 >
                   Animal
                </td>
                <td>
-                  <input type="checkbox" value=12 >
+                  <input type="checkbox" class="cert_chk" value=12 >
                   V Genero
                </td>
             </tr>
 
             <tr>
                <td>
-                  <input type="checkbox" value=13 >
+                  <input type="checkbox" class="cert_chk" value=13 >
                   Atención Diagnóstica
                </td>
                <td>
-                  <input type="checkbox" value=14 >
+                  <input type="checkbox" class="cert_chk" value=14 >
                   Derivación Interna
                </td>
             </tr>
 
             <tr>
                <td>
-                  <input type="checkbox" value=15 >
+                  <input type="checkbox" class="cert_chk" value=15 >
                   Orden Curación
                </td>
                <td>
