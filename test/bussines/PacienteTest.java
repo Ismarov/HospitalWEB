@@ -18,114 +18,6 @@
         /**
          * Auto generated test method
          */
-        public  void testobtenerEspecialidad() throws java.lang.Exception{
-
-        bussines.PacienteStub stub =
-                    new bussines.PacienteStub();//the default implementation should point to the right endpoint
-
-           bussines.PacienteStub.ObtenerEspecialidad obtenerEspecialidad16=
-                                                        (bussines.PacienteStub.ObtenerEspecialidad)getTestObject(bussines.PacienteStub.ObtenerEspecialidad.class);
-                    // TODO : Fill in the obtenerEspecialidad16 here
-                
-                        assertNotNull(stub.obtenerEspecialidad(
-                        obtenerEspecialidad16));
-                  
-
-
-
-        }
-        
-         /**
-         * Auto generated test method
-         */
-        public  void testStartobtenerEspecialidad() throws java.lang.Exception{
-            bussines.PacienteStub stub = new bussines.PacienteStub();
-             bussines.PacienteStub.ObtenerEspecialidad obtenerEspecialidad16=
-                                                        (bussines.PacienteStub.ObtenerEspecialidad)getTestObject(bussines.PacienteStub.ObtenerEspecialidad.class);
-                    // TODO : Fill in the obtenerEspecialidad16 here
-                
-
-                stub.startobtenerEspecialidad(
-                         obtenerEspecialidad16,
-                    new tempCallbackN65548()
-                );
-              
-
-
-        }
-
-        private class tempCallbackN65548  extends bussines.PacienteCallbackHandler{
-            public tempCallbackN65548(){ super(null);}
-
-            public void receiveResultobtenerEspecialidad(
-                         bussines.PacienteStub.ObtenerEspecialidadResponse result
-                            ) {
-                
-            }
-
-            public void receiveErrorobtenerEspecialidad(java.lang.Exception e) {
-                fail();
-            }
-
-        }
-      
-        /**
-         * Auto generated test method
-         */
-        public  void testbuscarHoraAps() throws java.lang.Exception{
-
-        bussines.PacienteStub stub =
-                    new bussines.PacienteStub();//the default implementation should point to the right endpoint
-
-           bussines.PacienteStub.BuscarHoraAps buscarHoraAps18=
-                                                        (bussines.PacienteStub.BuscarHoraAps)getTestObject(bussines.PacienteStub.BuscarHoraAps.class);
-                    // TODO : Fill in the buscarHoraAps18 here
-                
-                        assertNotNull(stub.buscarHoraAps(
-                        buscarHoraAps18));
-                  
-
-
-
-        }
-        
-         /**
-         * Auto generated test method
-         */
-        public  void testStartbuscarHoraAps() throws java.lang.Exception{
-            bussines.PacienteStub stub = new bussines.PacienteStub();
-             bussines.PacienteStub.BuscarHoraAps buscarHoraAps18=
-                                                        (bussines.PacienteStub.BuscarHoraAps)getTestObject(bussines.PacienteStub.BuscarHoraAps.class);
-                    // TODO : Fill in the buscarHoraAps18 here
-                
-
-                stub.startbuscarHoraAps(
-                         buscarHoraAps18,
-                    new tempCallbackN65604()
-                );
-              
-
-
-        }
-
-        private class tempCallbackN65604  extends bussines.PacienteCallbackHandler{
-            public tempCallbackN65604(){ super(null);}
-
-            public void receiveResultbuscarHoraAps(
-                         bussines.PacienteStub.BuscarHoraApsResponse result
-                            ) {
-                
-            }
-
-            public void receiveErrorbuscarHoraAps(java.lang.Exception e) {
-                fail();
-            }
-
-        }
-      
-        /**
-         * Auto generated test method
-         */
         public  void testreservarHoraAps() throws java.lang.Exception{
 
         bussines.PacienteStub stub =
@@ -155,15 +47,15 @@
 
                 stub.startreservarHoraAps(
                          reservarHoraAps20,
-                    new tempCallbackN65660()
+                    new tempCallbackN65548()
                 );
               
 
 
         }
 
-        private class tempCallbackN65660  extends bussines.PacienteCallbackHandler{
-            public tempCallbackN65660(){ super(null);}
+        private class tempCallbackN65548  extends bussines.PacienteCallbackHandler{
+            public tempCallbackN65548(){ super(null);}
 
             public void receiveResultreservarHoraAps(
                          bussines.PacienteStub.ReservarHoraApsResponse result
@@ -180,17 +72,125 @@
         /**
          * Auto generated test method
          */
+        public  void testbuscarHoraAps() throws java.lang.Exception{
+
+        bussines.PacienteStub stub =
+                    new bussines.PacienteStub();//the default implementation should point to the right endpoint
+
+           bussines.PacienteStub.BuscarHoraAps buscarHoraAps22=
+                                                        (bussines.PacienteStub.BuscarHoraAps)getTestObject(bussines.PacienteStub.BuscarHoraAps.class);
+                    // TODO : Fill in the buscarHoraAps22 here
+                
+                        assertNotNull(stub.buscarHoraAps(
+                        buscarHoraAps22));
+                  
+
+
+
+        }
+        
+         /**
+         * Auto generated test method
+         */
+        public  void testStartbuscarHoraAps() throws java.lang.Exception{
+            bussines.PacienteStub stub = new bussines.PacienteStub();
+             bussines.PacienteStub.BuscarHoraAps buscarHoraAps22=
+                                                        (bussines.PacienteStub.BuscarHoraAps)getTestObject(bussines.PacienteStub.BuscarHoraAps.class);
+                    // TODO : Fill in the buscarHoraAps22 here
+                
+
+                stub.startbuscarHoraAps(
+                         buscarHoraAps22,
+                    new tempCallbackN65589()
+                );
+              
+
+
+        }
+
+        private class tempCallbackN65589  extends bussines.PacienteCallbackHandler{
+            public tempCallbackN65589(){ super(null);}
+
+            public void receiveResultbuscarHoraAps(
+                         bussines.PacienteStub.BuscarHoraApsResponse result
+                            ) {
+                
+            }
+
+            public void receiveErrorbuscarHoraAps(java.lang.Exception e) {
+                fail();
+            }
+
+        }
+      
+        /**
+         * Auto generated test method
+         */
+        public  void testobtenerHorasPaciente() throws java.lang.Exception{
+
+        bussines.PacienteStub stub =
+                    new bussines.PacienteStub();//the default implementation should point to the right endpoint
+
+           bussines.PacienteStub.ObtenerHorasPaciente obtenerHorasPaciente24=
+                                                        (bussines.PacienteStub.ObtenerHorasPaciente)getTestObject(bussines.PacienteStub.ObtenerHorasPaciente.class);
+                    // TODO : Fill in the obtenerHorasPaciente24 here
+                
+                        assertNotNull(stub.obtenerHorasPaciente(
+                        obtenerHorasPaciente24));
+                  
+
+
+
+        }
+        
+         /**
+         * Auto generated test method
+         */
+        public  void testStartobtenerHorasPaciente() throws java.lang.Exception{
+            bussines.PacienteStub stub = new bussines.PacienteStub();
+             bussines.PacienteStub.ObtenerHorasPaciente obtenerHorasPaciente24=
+                                                        (bussines.PacienteStub.ObtenerHorasPaciente)getTestObject(bussines.PacienteStub.ObtenerHorasPaciente.class);
+                    // TODO : Fill in the obtenerHorasPaciente24 here
+                
+
+                stub.startobtenerHorasPaciente(
+                         obtenerHorasPaciente24,
+                    new tempCallbackN65630()
+                );
+              
+
+
+        }
+
+        private class tempCallbackN65630  extends bussines.PacienteCallbackHandler{
+            public tempCallbackN65630(){ super(null);}
+
+            public void receiveResultobtenerHorasPaciente(
+                         bussines.PacienteStub.ObtenerHorasPacienteResponse result
+                            ) {
+                
+            }
+
+            public void receiveErrorobtenerHorasPaciente(java.lang.Exception e) {
+                fail();
+            }
+
+        }
+      
+        /**
+         * Auto generated test method
+         */
         public  void testobtenerMedicosDeUnaEspecialidad() throws java.lang.Exception{
 
         bussines.PacienteStub stub =
                     new bussines.PacienteStub();//the default implementation should point to the right endpoint
 
-           bussines.PacienteStub.ObtenerMedicosDeUnaEspecialidad obtenerMedicosDeUnaEspecialidad22=
+           bussines.PacienteStub.ObtenerMedicosDeUnaEspecialidad obtenerMedicosDeUnaEspecialidad26=
                                                         (bussines.PacienteStub.ObtenerMedicosDeUnaEspecialidad)getTestObject(bussines.PacienteStub.ObtenerMedicosDeUnaEspecialidad.class);
-                    // TODO : Fill in the obtenerMedicosDeUnaEspecialidad22 here
+                    // TODO : Fill in the obtenerMedicosDeUnaEspecialidad26 here
                 
                         assertNotNull(stub.obtenerMedicosDeUnaEspecialidad(
-                        obtenerMedicosDeUnaEspecialidad22));
+                        obtenerMedicosDeUnaEspecialidad26));
                   
 
 
@@ -202,22 +202,22 @@
          */
         public  void testStartobtenerMedicosDeUnaEspecialidad() throws java.lang.Exception{
             bussines.PacienteStub stub = new bussines.PacienteStub();
-             bussines.PacienteStub.ObtenerMedicosDeUnaEspecialidad obtenerMedicosDeUnaEspecialidad22=
+             bussines.PacienteStub.ObtenerMedicosDeUnaEspecialidad obtenerMedicosDeUnaEspecialidad26=
                                                         (bussines.PacienteStub.ObtenerMedicosDeUnaEspecialidad)getTestObject(bussines.PacienteStub.ObtenerMedicosDeUnaEspecialidad.class);
-                    // TODO : Fill in the obtenerMedicosDeUnaEspecialidad22 here
+                    // TODO : Fill in the obtenerMedicosDeUnaEspecialidad26 here
                 
 
                 stub.startobtenerMedicosDeUnaEspecialidad(
-                         obtenerMedicosDeUnaEspecialidad22,
-                    new tempCallbackN65716()
+                         obtenerMedicosDeUnaEspecialidad26,
+                    new tempCallbackN65671()
                 );
               
 
 
         }
 
-        private class tempCallbackN65716  extends bussines.PacienteCallbackHandler{
-            public tempCallbackN65716(){ super(null);}
+        private class tempCallbackN65671  extends bussines.PacienteCallbackHandler{
+            public tempCallbackN65671(){ super(null);}
 
             public void receiveResultobtenerMedicosDeUnaEspecialidad(
                          bussines.PacienteStub.ObtenerMedicosDeUnaEspecialidadResponse result
@@ -226,6 +226,60 @@
             }
 
             public void receiveErrorobtenerMedicosDeUnaEspecialidad(java.lang.Exception e) {
+                fail();
+            }
+
+        }
+      
+        /**
+         * Auto generated test method
+         */
+        public  void testobtenerEspecialidad() throws java.lang.Exception{
+
+        bussines.PacienteStub stub =
+                    new bussines.PacienteStub();//the default implementation should point to the right endpoint
+
+           bussines.PacienteStub.ObtenerEspecialidad obtenerEspecialidad28=
+                                                        (bussines.PacienteStub.ObtenerEspecialidad)getTestObject(bussines.PacienteStub.ObtenerEspecialidad.class);
+                    // TODO : Fill in the obtenerEspecialidad28 here
+                
+                        assertNotNull(stub.obtenerEspecialidad(
+                        obtenerEspecialidad28));
+                  
+
+
+
+        }
+        
+         /**
+         * Auto generated test method
+         */
+        public  void testStartobtenerEspecialidad() throws java.lang.Exception{
+            bussines.PacienteStub stub = new bussines.PacienteStub();
+             bussines.PacienteStub.ObtenerEspecialidad obtenerEspecialidad28=
+                                                        (bussines.PacienteStub.ObtenerEspecialidad)getTestObject(bussines.PacienteStub.ObtenerEspecialidad.class);
+                    // TODO : Fill in the obtenerEspecialidad28 here
+                
+
+                stub.startobtenerEspecialidad(
+                         obtenerEspecialidad28,
+                    new tempCallbackN65712()
+                );
+              
+
+
+        }
+
+        private class tempCallbackN65712  extends bussines.PacienteCallbackHandler{
+            public tempCallbackN65712(){ super(null);}
+
+            public void receiveResultobtenerEspecialidad(
+                         bussines.PacienteStub.ObtenerEspecialidadResponse result
+                            ) {
+                
+            }
+
+            public void receiveErrorobtenerEspecialidad(java.lang.Exception e) {
                 fail();
             }
 
