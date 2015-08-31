@@ -45,19 +45,19 @@
 
         
            /**
-            * auto generated Axis2 call back method for obtenerEspecialidad method
-            * override this method for handling normal response from obtenerEspecialidad operation
+            * auto generated Axis2 call back method for reservarHoraAps method
+            * override this method for handling normal response from reservarHoraAps operation
             */
-           public void receiveResultobtenerEspecialidad(
-                    bussines.PacienteStub.ObtenerEspecialidadResponse result
+           public void receiveResultreservarHoraAps(
+                    bussines.PacienteStub.ReservarHoraApsResponse result
                         ) {
            }
 
           /**
            * auto generated Axis2 Error handler
-           * override this method for handling error response from obtenerEspecialidad operation
+           * override this method for handling error response from reservarHoraAps operation
            */
-            public void receiveErrorobtenerEspecialidad(java.lang.Exception e) {
+            public void receiveErrorreservarHoraAps(java.lang.Exception e) {
             }
                 
            /**
@@ -77,19 +77,19 @@
             }
                 
            /**
-            * auto generated Axis2 call back method for reservarHoraAps method
-            * override this method for handling normal response from reservarHoraAps operation
+            * auto generated Axis2 call back method for obtenerHorasPaciente method
+            * override this method for handling normal response from obtenerHorasPaciente operation
             */
-           public void receiveResultreservarHoraAps(
-                    bussines.PacienteStub.ReservarHoraApsResponse result
+           public void receiveResultobtenerHorasPaciente(
+                    bussines.PacienteStub.ObtenerHorasPacienteResponse result
                         ) {
            }
 
           /**
            * auto generated Axis2 Error handler
-           * override this method for handling error response from reservarHoraAps operation
+           * override this method for handling error response from obtenerHorasPaciente operation
            */
-            public void receiveErrorreservarHoraAps(java.lang.Exception e) {
+            public void receiveErrorobtenerHorasPaciente(java.lang.Exception e) {
             }
                 
            /**
@@ -106,6 +106,22 @@
            * override this method for handling error response from obtenerMedicosDeUnaEspecialidad operation
            */
             public void receiveErrorobtenerMedicosDeUnaEspecialidad(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for obtenerEspecialidad method
+            * override this method for handling normal response from obtenerEspecialidad operation
+            */
+           public void receiveResultobtenerEspecialidad(
+                    bussines.PacienteStub.ObtenerEspecialidadResponse result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from obtenerEspecialidad operation
+           */
+            public void receiveErrorobtenerEspecialidad(java.lang.Exception e) {
             }
                 
 

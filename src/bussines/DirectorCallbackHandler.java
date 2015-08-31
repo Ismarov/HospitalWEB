@@ -45,67 +45,19 @@
 
         
            /**
-            * auto generated Axis2 call back method for ingresarPaciente method
-            * override this method for handling normal response from ingresarPaciente operation
+            * auto generated Axis2 call back method for obtenerMedicoMasSolicitado method
+            * override this method for handling normal response from obtenerMedicoMasSolicitado operation
             */
-           public void receiveResultingresarPaciente(
-                    bussines.DirectorStub.IngresarPacienteResponse result
+           public void receiveResultobtenerMedicoMasSolicitado(
+                    bussines.DirectorStub.ObtenerMedicoMasSolicitadoResponse result
                         ) {
            }
 
           /**
            * auto generated Axis2 Error handler
-           * override this method for handling error response from ingresarPaciente operation
+           * override this method for handling error response from obtenerMedicoMasSolicitado operation
            */
-            public void receiveErroringresarPaciente(java.lang.Exception e) {
-            }
-                
-           /**
-            * auto generated Axis2 call back method for ingresarMedico method
-            * override this method for handling normal response from ingresarMedico operation
-            */
-           public void receiveResultingresarMedico(
-                    bussines.DirectorStub.IngresarMedicoResponse result
-                        ) {
-           }
-
-          /**
-           * auto generated Axis2 Error handler
-           * override this method for handling error response from ingresarMedico operation
-           */
-            public void receiveErroringresarMedico(java.lang.Exception e) {
-            }
-                
-           /**
-            * auto generated Axis2 call back method for obtenerBox method
-            * override this method for handling normal response from obtenerBox operation
-            */
-           public void receiveResultobtenerBox(
-                    bussines.DirectorStub.ObtenerBoxResponse result
-                        ) {
-           }
-
-          /**
-           * auto generated Axis2 Error handler
-           * override this method for handling error response from obtenerBox operation
-           */
-            public void receiveErrorobtenerBox(java.lang.Exception e) {
-            }
-                
-           /**
-            * auto generated Axis2 call back method for obtenerPorcentajeOcupacionMedico method
-            * override this method for handling normal response from obtenerPorcentajeOcupacionMedico operation
-            */
-           public void receiveResultobtenerPorcentajeOcupacionMedico(
-                    bussines.DirectorStub.ObtenerPorcentajeOcupacionMedicoResponse result
-                        ) {
-           }
-
-          /**
-           * auto generated Axis2 Error handler
-           * override this method for handling error response from obtenerPorcentajeOcupacionMedico operation
-           */
-            public void receiveErrorobtenerPorcentajeOcupacionMedico(java.lang.Exception e) {
+            public void receiveErrorobtenerMedicoMasSolicitado(java.lang.Exception e) {
             }
                 
            /**
@@ -141,19 +93,19 @@
             }
                 
            /**
-            * auto generated Axis2 call back method for obtenerMedicoMasSolicitado method
-            * override this method for handling normal response from obtenerMedicoMasSolicitado operation
+            * auto generated Axis2 call back method for obtenerBox method
+            * override this method for handling normal response from obtenerBox operation
             */
-           public void receiveResultobtenerMedicoMasSolicitado(
-                    bussines.DirectorStub.ObtenerMedicoMasSolicitadoResponse result
+           public void receiveResultobtenerBox(
+                    bussines.DirectorStub.ObtenerBoxResponse result
                         ) {
            }
 
           /**
            * auto generated Axis2 Error handler
-           * override this method for handling error response from obtenerMedicoMasSolicitado operation
+           * override this method for handling error response from obtenerBox operation
            */
-            public void receiveErrorobtenerMedicoMasSolicitado(java.lang.Exception e) {
+            public void receiveErrorobtenerBox(java.lang.Exception e) {
             }
                 
            /**
@@ -186,6 +138,54 @@
            * override this method for handling error response from obtenerMedico operation
            */
             public void receiveErrorobtenerMedico(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for ingresarPaciente method
+            * override this method for handling normal response from ingresarPaciente operation
+            */
+           public void receiveResultingresarPaciente(
+                    bussines.DirectorStub.IngresarPacienteResponse result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from ingresarPaciente operation
+           */
+            public void receiveErroringresarPaciente(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for ingresarMedico method
+            * override this method for handling normal response from ingresarMedico operation
+            */
+           public void receiveResultingresarMedico(
+                    bussines.DirectorStub.IngresarMedicoResponse result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from ingresarMedico operation
+           */
+            public void receiveErroringresarMedico(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for obtenerPorcentajeOcupacionMedico method
+            * override this method for handling normal response from obtenerPorcentajeOcupacionMedico operation
+            */
+           public void receiveResultobtenerPorcentajeOcupacionMedico(
+                    bussines.DirectorStub.ObtenerPorcentajeOcupacionMedicoResponse result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from obtenerPorcentajeOcupacionMedico operation
+           */
+            public void receiveErrorobtenerPorcentajeOcupacionMedico(java.lang.Exception e) {
             }
                 
 

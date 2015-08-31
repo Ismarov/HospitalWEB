@@ -45,19 +45,35 @@
 
         
            /**
-            * auto generated Axis2 call back method for obtenerReceta method
-            * override this method for handling normal response from obtenerReceta operation
+            * auto generated Axis2 call back method for obtenerRceDeUnPaciente method
+            * override this method for handling normal response from obtenerRceDeUnPaciente operation
             */
-           public void receiveResultobtenerReceta(
-                    bussines.RceStub.ObtenerRecetaResponse result
+           public void receiveResultobtenerRceDeUnPaciente(
+                    bussines.RceStub.ObtenerRceDeUnPacienteResponse result
                         ) {
            }
 
           /**
            * auto generated Axis2 Error handler
-           * override this method for handling error response from obtenerReceta operation
+           * override this method for handling error response from obtenerRceDeUnPaciente operation
            */
-            public void receiveErrorobtenerReceta(java.lang.Exception e) {
+            public void receiveErrorobtenerRceDeUnPaciente(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for obtenerMedicoPorRut method
+            * override this method for handling normal response from obtenerMedicoPorRut operation
+            */
+           public void receiveResultobtenerMedicoPorRut(
+                    bussines.RceStub.ObtenerMedicoPorRutResponse result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from obtenerMedicoPorRut operation
+           */
+            public void receiveErrorobtenerMedicoPorRut(java.lang.Exception e) {
             }
                 
            /**
@@ -77,6 +93,38 @@
             }
                 
            /**
+            * auto generated Axis2 call back method for obtenerPacientePorRut method
+            * override this method for handling normal response from obtenerPacientePorRut operation
+            */
+           public void receiveResultobtenerPacientePorRut(
+                    bussines.RceStub.ObtenerPacientePorRutResponse result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from obtenerPacientePorRut operation
+           */
+            public void receiveErrorobtenerPacientePorRut(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for obtenerActividad method
+            * override this method for handling normal response from obtenerActividad operation
+            */
+           public void receiveResultobtenerActividad(
+                    bussines.RceStub.ObtenerActividadResponse result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from obtenerActividad operation
+           */
+            public void receiveErrorobtenerActividad(java.lang.Exception e) {
+            }
+                
+           /**
             * auto generated Axis2 call back method for obtenerCierre_destino method
             * override this method for handling normal response from obtenerCierre_destino operation
             */
@@ -93,19 +141,19 @@
             }
                 
            /**
-            * auto generated Axis2 call back method for obtenerProcedimiento method
-            * override this method for handling normal response from obtenerProcedimiento operation
+            * auto generated Axis2 call back method for ingresarRce method
+            * override this method for handling normal response from ingresarRce operation
             */
-           public void receiveResultobtenerProcedimiento(
-                    bussines.RceStub.ObtenerProcedimientoResponse result
+           public void receiveResultingresarRce(
+                    bussines.RceStub.IngresarRceResponse result
                         ) {
            }
 
           /**
            * auto generated Axis2 Error handler
-           * override this method for handling error response from obtenerProcedimiento operation
+           * override this method for handling error response from ingresarRce operation
            */
-            public void receiveErrorobtenerProcedimiento(java.lang.Exception e) {
+            public void receiveErroringresarRce(java.lang.Exception e) {
             }
                 
            /**
@@ -141,38 +189,6 @@
             }
                 
            /**
-            * auto generated Axis2 call back method for obtenerDiagnostico method
-            * override this method for handling normal response from obtenerDiagnostico operation
-            */
-           public void receiveResultobtenerDiagnostico(
-                    bussines.RceStub.ObtenerDiagnosticoResponse result
-                        ) {
-           }
-
-          /**
-           * auto generated Axis2 Error handler
-           * override this method for handling error response from obtenerDiagnostico operation
-           */
-            public void receiveErrorobtenerDiagnostico(java.lang.Exception e) {
-            }
-                
-           /**
-            * auto generated Axis2 call back method for obtenerActividad method
-            * override this method for handling normal response from obtenerActividad operation
-            */
-           public void receiveResultobtenerActividad(
-                    bussines.RceStub.ObtenerActividadResponse result
-                        ) {
-           }
-
-          /**
-           * auto generated Axis2 Error handler
-           * override this method for handling error response from obtenerActividad operation
-           */
-            public void receiveErrorobtenerActividad(java.lang.Exception e) {
-            }
-                
-           /**
             * auto generated Axis2 call back method for obtenerTiempo_control method
             * override this method for handling normal response from obtenerTiempo_control operation
             */
@@ -189,19 +205,67 @@
             }
                 
            /**
-            * auto generated Axis2 call back method for obtenerRceDeUnPaciente method
-            * override this method for handling normal response from obtenerRceDeUnPaciente operation
+            * auto generated Axis2 call back method for ingresarReceta method
+            * override this method for handling normal response from ingresarReceta operation
             */
-           public void receiveResultobtenerRceDeUnPaciente(
-                    bussines.RceStub.ObtenerRceDeUnPacienteResponse result
+           public void receiveResultingresarReceta(
+                    bussines.RceStub.IngresarRecetaResponse result
                         ) {
            }
 
           /**
            * auto generated Axis2 Error handler
-           * override this method for handling error response from obtenerRceDeUnPaciente operation
+           * override this method for handling error response from ingresarReceta operation
            */
-            public void receiveErrorobtenerRceDeUnPaciente(java.lang.Exception e) {
+            public void receiveErroringresarReceta(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for obtenerProcedimiento method
+            * override this method for handling normal response from obtenerProcedimiento operation
+            */
+           public void receiveResultobtenerProcedimiento(
+                    bussines.RceStub.ObtenerProcedimientoResponse result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from obtenerProcedimiento operation
+           */
+            public void receiveErrorobtenerProcedimiento(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for obtenerDiagnostico method
+            * override this method for handling normal response from obtenerDiagnostico operation
+            */
+           public void receiveResultobtenerDiagnostico(
+                    bussines.RceStub.ObtenerDiagnosticoResponse result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from obtenerDiagnostico operation
+           */
+            public void receiveErrorobtenerDiagnostico(java.lang.Exception e) {
+            }
+                
+           /**
+            * auto generated Axis2 call back method for obtenerReceta method
+            * override this method for handling normal response from obtenerReceta operation
+            */
+           public void receiveResultobtenerReceta(
+                    bussines.RceStub.ObtenerRecetaResponse result
+                        ) {
+           }
+
+          /**
+           * auto generated Axis2 Error handler
+           * override this method for handling error response from obtenerReceta operation
+           */
+            public void receiveErrorobtenerReceta(java.lang.Exception e) {
             }
                 
 
