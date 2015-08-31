@@ -297,4 +297,14 @@
     <servlet-name>SIngresarRce</servlet-name>
     <url-pattern>/ingresarRce</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SIngresarReceta</display-name>
+    <servlet-name>SIngresarReceta</servlet-name>
+    <servlet-class>servlet.rce.SIngresarReceta</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SIngresarReceta</servlet-name>
+    <url-pattern>/ingresarReceta</url-pattern>
+  </servlet-mapping>
 </web-app>
