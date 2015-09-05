@@ -59,10 +59,10 @@ function procesarHce(hce){
 
 		$("#hce").html("");
 		for (var i = 0; i < hce.length; i++) {
-			var html = "<div>";
+			var html = "<div class='well'>";
 				html += "<h2>"+hce[i].horamedica.finicio+"</h2>";
 				html += "<h4>Medico: "+hce[i].horamedica.medicovo.persona.nombres+" "+hce[i].horamedica.medicovo.persona.apellidos+" - "+ hce[i].horamedica.medicovo.especialidad.nombre +"</h4>";
-				html += "<table>";
+				html += "<table class='table'>";
 					//html += JSON.stringify(hce[i]);
 					//html += "<tr> <td><h3>AAAA</h3></td> <td>"+hce[i].+"</td> </tr>";
 					html += "<tr> <td><h3>Anamnesis</h3></td> <td>"+hce[i].anamnesis+"</td> </tr>";

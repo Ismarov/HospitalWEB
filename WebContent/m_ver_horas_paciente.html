@@ -6,21 +6,52 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/hospital/hosp_page_params.js"></script>
 	<script src="js/hospital/m_ver_horas_paciente.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/layouts/styles.css">
 </head>
 <body>
 
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <!--div class="container"-->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Sistema de Reservas</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="m_index.html">MEDICO</a></li>
+            <li><a href="m_consulta_reserva.html">Consultar horas reservadas</a></li>
+            <li class="active"><a href="m_buscar_paciente.html">Buscar paciente</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      <!--/div--><!-- /.container -->
+    </nav><!-- /.navbar -->
 
-<table id="tableHoras">
-	<thead>
-		<tr>
-			<td>Fecha</td>
-			<td>Box</td>
-			<td>Medico</td>
-			<td>Especialidad</td>
-			<td>Acción</td>
-		</tr>
-	</thead>
-	<tbody></tbody>
-</table>
+	<div class="container">
+		<div class="row">
+
+			<!-- ## -->
+			<table id="tableHoras" class="table">
+				<thead>
+					<tr>
+						<td>Fecha</td>
+						<td>Box</td>
+						<td>Medico</td>
+						<td>Especialidad</td>
+						<td>Acción</td>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+			<!-- ## -->
+		</div>
+	</div>
+
 </body>
 </html>

@@ -176,3 +176,19 @@ function insertarReceta(){
 		insertarRce();
 	}
 }
+
+
+/*
+
+Objeto Receta
+
+{
+	id : 0,
+	paciente_ges : 0,
+	paciente_cronico : 0,
+	patologia_ges : 0,
+	desc : ""
+}
+
+
+*/

@@ -6,257 +6,248 @@
    <script src="js/jquery.js"></script>
    <script src="js/hospital/hosp_page_params.js"></script>
    <script src="js/hospital/m_rce.js"></script>
+   <script src="js/bootstrap.js"></script>
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="css/layouts/styles.css">
 </head>
 <body>
 
-<h3>Registro Clínico</h3>
+   <nav class="navbar navbar-fixed-top navbar-inverse">
+   <!--div class="container"-->
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+       <a class="navbar-brand" href="#">Sistema de Reservas</a>
+     </div>
+     <div id="navbar" class="collapse navbar-collapse">
+       <ul class="nav navbar-nav">
+         <li><a href="m_index.html">MEDICO</a></li>
+         <li><a href="m_consulta_reserva.html">Consultar horas reservadas</a></li>
+         <li class="active"><a href="m_buscar_paciente.html">Buscar paciente</a></li>
+       </ul>
+     </div><!-- /.nav-collapse -->
+   <!--/div--><!-- /.container -->
+   </nav><!-- /.navbar -->
 
-<form id="form_rce">
+   <div class="container">
 
-   <input type="hidden" id="id" name="id" value="0" >
-   <input type="hidden" id="encounter_uuid" name="encounter_uuid" value="0" >
+      <h3>Registro Clínico</h3>
 
-   <label for"alergias">Alergias</label><br>
-   <textarea type="" id="alergias" name="alergias" ></textarea>
-   <br>
-   <label for"anamnesis">Anamnesis</label><br>
-   <textarea type="" id="anamnesis" name="anamnesis" ></textarea>
-   <br>
-   <label for"motivo">Motivo</label><br>
-   <textarea type="" id="motivo" name="motivo" ></textarea>
-   <br>
-   <label for"examen_fisico">Examen físico</label><br>
-   <textarea type="" id="examen_fisico" name="examen_fisico" ></textarea>
-   <br>
-   <label for"indicador_medico">Indicador Médico</label><br>
-   <textarea type="" id="indicador_medico" name="indicador_medico" ></textarea>
-   <br>
-   <label for"indicador_cierre">Indicador Cierre</label><br>
-   <textarea type="" id="indicador_cierre" name="indicador_cierre" ></textarea>
-   <br>
-   <label for"hipotesis">Hipotesis</label><br>
-   <textarea type="" id="hipotesis" name="hipotesis" ></textarea>
-   <br>
-   <label for"detalle_ges">Detalle GES</label><br>
-   <textarea type="" id="detalle_ges" name="detalle_ges" ></textarea>
-   <br>
-   <!--label for"horamedica_id">ID Hora Médica</label><br-->
-   <input type="hidden" id="horamedica_id" name="horamedica_id" value="" >
-   <br>
-   <!--label for"receta_id">ID Receta</label><br-->
-   <input type="hidden" id="receta_id" name="receta_id" value="0" >
-   <br>
-   <label for"diagnostico_id">Diagnostico</label><br>
-   <select id="diagnostico_id" name="diagnostico_id"></select>
-   <br>
-   <label for"procedimiento_id">Procedimiento</label><br>
-   <select id="procedimiento_id" name="procedimiento_id"></select>
-   <br>
-   <label for"actividad_id">Actividad</label><br>
-   <select id="actividad_id" name="actividad_id"></select>
-   <br>
-   <!--label for"paciente_id">ID Paciente</label><br-->
-   <input type="hidden" id="paciente_id" name="paciente_id" value="" >
-   <br>
-   <!--label for"lCertificados">lCertificados</label><br-->
-   <input type="hidden" id="lCertificados" name="lCertificados" value="[]" >
-   <br>
-</form>
+      <div class="row">
+         <!-- ## -->
+         <div class="form-group">
+         <form id="form_rce" class="form">
 
-<hr>
+            <input type="hidden" id="id" name="id" value="0" >
+            <input type="hidden" id="encounter_uuid" name="encounter_uuid" value="0" >
 
-<form id="form_receta">
-   <div><!-- receta -->
-      <h3>Receta</h3>
-      <div>
-         Tipo Paciente y Tipo Medicamento
-         <div>
-            <table>
-               
-               <tr>
-                  <td>
-                     <input type="checkbox" name="p_ges" value=0>
-                     Paciente GES
-                  </td>
-                  <td>
-                     <input type="checkbox" name="p_pges" value=0>
-                     Patología GES
-                  </td>
-               </tr>
-               
-               <tr>
-                  <td>
-                     <input type="checkbox" name="p_cron" value=0>
-                     Paciente Crónico
-                  </td>
-                  <td>
-                     <!---->
-                  </td>
-               </tr>
-
-               <tr>
-                  <td>
-                     <textarea id="receta_desc" name="desc" placeholder="Texto de la receta"></textarea>
-                  </td>
-                  <td>
-                     <!---->
-                  </td>
-               </tr>
-
-            </table>
+            <label for"alergias">Alergias</label><br>
+            <textarea class="form-control" type="" id="alergias" name="alergias" ></textarea>
+            <br>
+            <label for"anamnesis">Anamnesis</label><br>
+            <textarea class="form-control" type="" id="anamnesis" name="anamnesis" ></textarea>
+            <br>
+            <label for"motivo">Motivo</label><br>
+            <textarea class="form-control" type="" id="motivo" name="motivo" ></textarea>
+            <br>
+            <label for"examen_fisico">Examen físico</label><br>
+            <textarea class="form-control" type="" id="examen_fisico" name="examen_fisico" ></textarea>
+            <br>
+            <label for"indicador_medico">Indicador Médico</label><br>
+            <textarea class="form-control" type="" id="indicador_medico" name="indicador_medico" ></textarea>
+            <br>
+            <label for"indicador_cierre">Indicador Cierre</label><br>
+            <textarea class="form-control" type="" id="indicador_cierre" name="indicador_cierre" ></textarea>
+            <br>
+            <label for"hipotesis">Hipotesis</label><br>
+            <textarea class="form-control" type="" id="hipotesis" name="hipotesis" ></textarea>
+            <br>
+            <label for"detalle_ges">Detalle GES</label><br>
+            <textarea class="form-control" type="" id="detalle_ges" name="detalle_ges" ></textarea>
+            <br>
+            <!--label for"horamedica_id">ID Hora Médica</label><br-->
+            <input type="hidden" id="horamedica_id" name="horamedica_id" value="" >
+            <br>
+            <!--label for"receta_id">ID Receta</label><br-->
+            <input type="hidden" id="receta_id" name="receta_id" value="0" >
+            <br>
+            <label for"diagnostico_id">Diagnostico</label><br>
+            <select class="form-control" id="diagnostico_id" name="diagnostico_id"></select>
+            <br>
+            <label for"procedimiento_id">Procedimiento</label><br>
+            <select class="form-control" id="procedimiento_id" name="procedimiento_id"></select>
+            <br>
+            <label for"actividad_id">Actividad</label><br>
+            <select class="form-control" id="actividad_id" name="actividad_id"></select>
+            <br>
+            <!--label for"paciente_id">ID Paciente</label><br-->
+            <input type="hidden" id="paciente_id" name="paciente_id" value="" >
+            <br>
+            <!--label for"lCertificados">lCertificados</label><br-->
+            <input type="hidden" id="lCertificados" name="lCertificados" value="[]" >
+            <br>
+         </form>
          </div>
+
+         <hr>
+
+         <form id="form_receta">
+            <div><!-- receta -->
+               <h3>Receta</h3>
+               <div>
+                  Tipo Paciente y Tipo Medicamento
+                  <div>
+                     <table>
+                        
+                        <tr>
+                           <td>
+                              <input type="checkbox" name="p_ges" value=0>
+                              Paciente GES
+                           </td>
+                           <td>
+                              <input type="checkbox" name="p_pges" value=0>
+                              Patología GES
+                           </td>
+                        </tr>
+                        
+                        <tr>
+                           <td>
+                              <input type="checkbox" name="p_cron" value=0>
+                              Paciente Crónico
+                           </td>
+                           <td>
+                              <!---->
+                           </td>
+                        </tr>
+
+                        <tr>
+                           <td>
+                              <textarea class="form-control" id="receta_desc" name="desc" placeholder="Texto de la receta"></textarea>
+                           </td>
+                           <td>
+                              <!---->
+                           </td>
+                        </tr>
+
+                     </table>
+                  </div>
+               </div>
+            </div><!-- fin receta -->
+         </form>
+
+         <hr>
+
+         <div class="form-group">
+         <form id="form_certificado">
+            <div><!-- Certificado -->
+               <h3>Certificados</h3>
+               <div>
+                  <table>
+
+                     <tr>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=1 >
+                           Alcoholemia
+                        </td>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=2 >
+                           Drogas
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=3 >
+                           Suicidio
+                        </td>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=4 >
+                           Otros ML
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=5 >
+                           Salud Compatible
+                        </td>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=6 >
+                           Atención Profesional
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=7 >
+                           Citación a KNT
+                        </td>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=8 >
+                           Orden Citación
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=9 >
+                           V Intrafamiliar
+                        </td>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=10 >
+                           Lesiones
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=11 >
+                           Animal
+                        </td>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=12 >
+                           V Genero
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=13 >
+                           Atención Diagnóstica
+                        </td>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=14 >
+                           Derivación Interna
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td>
+                           <input type="checkbox" class="cert_chk" value=15 >
+                           Orden Curación
+                        </td>
+                        <td>
+                           <!---->
+                        </td>
+                     </tr>
+
+                  </table>
+               </div>
+            </div> <!-- fin certificado -->
+         </form>
+         </div>
+
+         <hr>
+
+         <button id="btnIngresar" class="btn btn-primary">Crear Registro</button>
+         <!-- ## -->
+
       </div>
-   </div><!-- fin receta -->
-</form>
-
-<hr>
-
-<form id="form_certificado">
-   <div><!-- Certificado -->
-      <h3>Certificados</h3>
-      <div>
-         <table>
-
-            <tr>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=1 >
-                  Alcoholemia
-               </td>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=2 >
-                  Drogas
-               </td>
-            </tr>
-
-            <tr>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=3 >
-                  Suicidio
-               </td>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=4 >
-                  Otros ML
-               </td>
-            </tr>
-
-            <tr>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=5 >
-                  Salud Compatible
-               </td>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=6 >
-                  Atención Profesional
-               </td>
-            </tr>
-
-            <tr>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=7 >
-                  Citación a KNT
-               </td>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=8 >
-                  Orden Citación
-               </td>
-            </tr>
-
-            <tr>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=9 >
-                  V Intrafamiliar
-               </td>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=10 >
-                  Lesiones
-               </td>
-            </tr>
-
-            <tr>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=11 >
-                  Animal
-               </td>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=12 >
-                  V Genero
-               </td>
-            </tr>
-
-            <tr>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=13 >
-                  Atención Diagnóstica
-               </td>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=14 >
-                  Derivación Interna
-               </td>
-            </tr>
-
-            <tr>
-               <td>
-                  <input type="checkbox" class="cert_chk" value=15 >
-                  Orden Curación
-               </td>
-               <td>
-                  <!---->
-               </td>
-            </tr>
-
-         </table>
-      </div>
-   </div> <!-- fin certificado -->
-</form>
-
-<hr>
-
-<button id="btnIngresar">Crear Registro</button>
+   </div>
 
 </body>
 </html>
-
-<!--
-id
-encounter_uuid
-alergias
-anamnesis
-motivo
-examen_fisico
-indicador_medico
-indicador_cierre
-hipotesis
-detalle_ges
-horamedica_id
-receta_id
-diagnostico_id
-procedimiento_id
-actividad_id
-paciente_id
-lCertificados
--->
-
-<!--
-
-+----+------------------------+
-| id | desc                   |
-+----+------------------------+
-|  1 | Alcoholemia            |
-|  2 | Drogas                 |
-|  3 | Suicidio               |
-|  4 | Otros ML               |
-|  5 | Salud Compatible       |
-|  6 | Atención Profesional   |
-|  7 | Citación a KNT         |
-|  8 | Orden Citacíon         |
-|  9 | V. Intrafamiliar       |
-| 10 | Lesiones               |
-| 11 | Animal                 |
-| 12 | V. Género              |
-| 13 | Atención Diagnóstica   |
-| 14 | Derivación Interna     |
-| 15 | Orden Curación         |
-+----+------------------------+
-
-
--->
