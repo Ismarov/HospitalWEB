@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.RceStub;
-import bussines.RceStub.ObtenerRceDeUnPaciente;
-import bussines.RceStub.ObtenerRceDeUnPacienteResponse;
+import servicios.RceStub;
+import servicios.RceStub.ObtenerHceDeUnPaciente;
+import servicios.RceStub.ObtenerHceDeUnPacienteResponse;
 
 /**
  * Servlet implementation class SGetHcePaciente
@@ -31,9 +31,9 @@ public class SGetHcePaciente extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RceStub rce = new RceStub();
-		ObtenerRceDeUnPaciente stRcePaciente = new ObtenerRceDeUnPaciente();
-		stRcePaciente.setIdPaciente(Integer.parseInt(request.getParameter("id")));
-		ObtenerRceDeUnPacienteResponse res = rce.obtenerRceDeUnPaciente(stRcePaciente);
+		ObtenerHceDeUnPaciente stHcePaciente = new ObtenerHceDeUnPaciente();
+		stHcePaciente.setIdPaciente(Integer.parseInt(request.getParameter("id")));
+		ObtenerHceDeUnPacienteResponse res = rce.obtenerHceDeUnPaciente(stHcePaciente);
 		
 		response.getWriter().append(res.get_return());
 	}

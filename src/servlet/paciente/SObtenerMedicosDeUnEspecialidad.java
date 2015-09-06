@@ -5,9 +5,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import bussines.PacienteStub;
-import bussines.PacienteStub.ObtenerMedicosDeUnaEspecialidad;
-import bussines.PacienteStub.ObtenerMedicosDeUnaEspecialidadResponse;
+import servicios.PacienteStub;
+import servicios.PacienteStub.ObtenerMedicosDeUnaEspecialidad;
+import servicios.PacienteStub.ObtenerMedicosDeUnaEspecialidadResponse;
 /**
  * Servlet implementation class ObtenerMédicosDeUnEspecialidad
  */

@@ -5,9 +5,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import bussines.RceStub;
-import bussines.RceStub.ObtenerActividad;
-import bussines.RceStub.ObtenerActividadResponse;;
+import servicios.RceStub;
+import servicios.RceStub.ObtenerActividades;
+import servicios.RceStub.ObtenerActividadesResponse;;
 /**
  * Servlet implementation class SGetActividades
  */
@@ -28,8 +28,8 @@ public class SGetActividades extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RceStub rce = new RceStub();
-		ObtenerActividad stGetActividades = new ObtenerActividad();
-		ObtenerActividadResponse res = rce.obtenerActividad(stGetActividades);
+		ObtenerActividades stGetActividades = new ObtenerActividades();
+		ObtenerActividadesResponse res = rce.obtenerActividades(stGetActividades);
 		
 		response.getWriter().append(res.get_return());
 	}

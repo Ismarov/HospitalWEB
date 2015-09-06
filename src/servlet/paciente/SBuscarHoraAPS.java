@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.PacienteStub;
-import bussines.PacienteStub.BuscarHoraAps;
-import bussines.PacienteStub.BuscarHoraApsResponse;
+import servicios.PacienteStub;
+import servicios.PacienteStub.BuscarHoraAps;
+import servicios.PacienteStub.BuscarHoraApsResponse;
 
 /**
  * Servlet implementation class BuscarHoraAPS

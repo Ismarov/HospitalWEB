@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.DirectorStub;
-import bussines.DirectorStub.ObtenerBox;
-import bussines.DirectorStub.ObtenerBoxResponse;
+import servicios.DirectorStub;
+import servicios.DirectorStub.ObtenerBoxes;
+import servicios.DirectorStub.ObtenerBoxesResponse;
 
 /**
  * Servlet implementation class ObtenerBox
@@ -31,9 +31,9 @@ public class SObtenerBox extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		DirectorStub dst = new DirectorStub();
 		
-		ObtenerBox stObtenerBox = new ObtenerBox();
+		ObtenerBoxes stObtenerBox = new ObtenerBoxes();
 		   
-		ObtenerBoxResponse obBoxResponse = dst.obtenerBox(stObtenerBox);
+		ObtenerBoxesResponse obBoxResponse = dst.obtenerBoxes(stObtenerBox);
 		
 		String s= obBoxResponse.get_return();
 		   request.setAttribute("boxes", s);

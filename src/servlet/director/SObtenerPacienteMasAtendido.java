@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.DirectorStub;
-import bussines.DirectorStub.*;
+import servicios.DirectorStub;
+import servicios.DirectorStub.*;
 
 /**
  * Servlet implementation class SObtenerPacienteMasAtendido

@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.DirectorStub;
-import bussines.DirectorStub.ObtenerPorcentajeOcupacionMedico;
-import bussines.DirectorStub.ObtenerPorcentajeOcupacionMedicoResponse;
+import servicios.DirectorStub;
+import servicios.DirectorStub.ObtenerPorcentajeOcupacionMedico;
+import servicios.DirectorStub.ObtenerPorcentajeOcupacionMedicoResponse;
 
 /**
  * Servlet implementation class ObtenerPorcentajeOcupacionMedico

@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.RceStub;
-import bussines.RceStub.ObtenerPacientePorRut;
-import bussines.RceStub.ObtenerPacientePorRutResponse;
+import servicios.RceStub;
+import servicios.RceStub.ObtenerPacientePorRut;
+import servicios.RceStub.ObtenerPacientePorRutResponse;
 
 /**
  * Servlet implementation class SGetPacienteRut
@@ -33,7 +33,7 @@ public class SGetPacienteRut extends HttpServlet {
 		String rut = request.getParameter("rut");
 		RceStub rce = new RceStub();
 		ObtenerPacientePorRut stPaciente = new ObtenerPacientePorRut();
-		stPaciente.setRutIngresado(rut);
+		stPaciente.setRut(rut);
 		ObtenerPacientePorRutResponse res = rce.obtenerPacientePorRut(stPaciente);
 		response.getWriter().append(res.get_return());		
 	}
