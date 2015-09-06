@@ -43,14 +43,14 @@ public class SIngresarRce extends HttpServlet {
 		int horamedica_id		=	request.getParameter("horamedica_id") != null ? Integer.parseInt(request.getParameter("horamedica_id")) : 0;
 		String receta_json		=	request.getParameter("receta_json");
 		int diagnostico_id		=	request.getParameter("diagnostico_id") != null ? Integer.parseInt(request.getParameter("diagnostico_id")) : 0;
-		String lprocedimientos	=	request.getParameter("lprocedimientos");
-		String lactividades		=	request.getParameter("lactividades");
-		int paciente_id		=	request.getParameter("lpacientes") != null ? Integer.parseInt(request.getParameter("paciente_id")) : 0;
+		String lprocedimientos	=	request.getParameter("lprocedimiento_id");
+		String lactividades		=	request.getParameter("lactividad_id");
+		int paciente_id		=	request.getParameter("paciente_id") != null ? Integer.parseInt(request.getParameter("paciente_id")) : 0;
 		String lCertificados	=	request.getParameter("lCertificados");
 		
 		
-		if( /*id != 0 && */diagnostico_id != 0 && paciente_id != 0){
-			if(/*encounter_uuid != null && */lprocedimientos != null && lactividades != null && receta_json != null && alergias != null && anamnesis != null && motivo != null && examen_fisico != null && indicador_medico != null && indicador_cierre != null && hipotesis != null && detalle_ges != null && lCertificados != null ){
+		if( /*id != 0 && */diagnostico_id != 0 && paciente_id != 0 && horamedica_id != 0){
+			if(/*encounter_uuid != null && */lprocedimientos != null && lactividades != null && receta_json != null && alergias != null && anamnesis != null && motivo != null && examen_fisico != null && indicador_medico != null && indicador_cierre != null && hipotesis != null && lCertificados != null ){
 				RceStub rse = new RceStub();
 				IngresarRce stRce = new IngresarRce();
 				stRce.setId(0);

@@ -13,9 +13,6 @@
 
 <form id="form_rce">
 
-   <input type="hidden" id="id" name="id" value="0" >
-   <input type="hidden" id="encounter_uuid" name="encounter_uuid" value="0" >
-
    <label for"alergias">Alergias</label><br>
    <textarea type="" id="alergias" name="alergias" ></textarea>
    <br>
@@ -40,34 +37,72 @@
    <label for"detalle_ges">Detalle GES</label><br>
    <textarea type="" id="detalle_ges" name="detalle_ges" ></textarea>
    <br>
-   <!--label for"horamedica_id">ID Hora Médica</label><br-->
+   
    <input type="hidden" id="horamedica_id" name="horamedica_id" value="" >
-   <br>
-   <!--label for"receta_id">ID Receta</label><br-->
-   <input type="hidden" id="receta_id" name="receta_id" value="0" >
+   <input type="hidden" id="id" name="id" value="0" >
+   <input type="hidden" id="encounter_uuid" name="encounter_uuid" value="0" >
    <br>
    <label for"diagnostico_id">Diagnostico</label><br>
    <select id="diagnostico_id" name="diagnostico_id"></select>
    <br>
-   <label for"procedimiento_id">Procedimiento</label><br>
-   <select id="procedimiento_id" name="procedimiento_id"></select>
-   <br>
-   <label for"actividad_id">Actividad</label><br>
-   <select id="actividad_id" name="actividad_id"></select>
-   <br>
-   <!--label for"paciente_id">ID Paciente</label><br-->
+
    <input type="hidden" id="paciente_id" name="paciente_id" value="" >
-   <br>
-   <!--label for"lCertificados">lCertificados</label><br-->
+   <input type="hidden" id="receta_json" name="receta_json" value="[]" >
    <input type="hidden" id="lCertificados" name="lCertificados" value="[]" >
+   <input type="hidden" id="lprocedimiento_id" name="lprocedimiento_id" value="[]" >
+   <input type="hidden" id="lactividad_id" name="lactividad_id" value="[]" >
    <br>
 </form>
 
 <hr>
 
-<form id="form_receta">
-   <div><!-- receta -->
-      <h3>Receta</h3>
+<div><!-- actividad-->
+   <div>
+      <h3>Seleccionar Procedimientos</h3>
+      <label for"procedimiento_id">Procedimiento</label><br>
+      <select id="procedimiento_id" name="procedimiento_id"></select>
+      <button id="btnAddProcedimiento">Añadir</button>
+   </div>
+
+
+   <div><!-- actividades-->
+      <h3>Procedimientos</h3>
+      <table id="tableProcedimientos">
+         <!--<tr>
+            <td>Procedimiento 1</td><td><button class="btnRemoveProcedimiento">Quitar</button></td>
+         </tr>-->
+      </table>
+   </div><!-- actividades-->
+
+</div><!-- fin actividad-->
+
+<hr>
+
+<div><!-- procedimiento-->
+   <div>
+      <h3>Seleccionar actividades</h3>
+      <label for"actividad_id">Actividad</label><br>
+      <select id="actividad_id" name="actividad_id"></select>
+      <button id="btnAddActividad">Añadir</button>
+   </div>
+
+   <div><!-- procedimientos -->
+      <h3>Actividades</h3>
+      <table id="tableActividades">
+         <!--<tr>
+            <td>Actividad 1</td><td><button class="btnRemoveActividad">Quitar</button></td>
+         </tr>-->
+      </table>
+   </div><!-- fin procedimientos -->
+
+</div><!-- fin procedimiento-->
+
+<hr>
+
+<div><!-- receta -->
+   <div><!-- form receta -->
+   <form id="form_receta">
+      <h3>Crear Receta</h3>
       <div>
          Tipo Paciente y Tipo Medicamento
          <div>
@@ -106,8 +141,18 @@
             </table>
          </div>
       </div>
-   </div><!-- fin receta -->
-</form>
+   </form>
+   <button id="btnAddReceta">Añadir</button>
+   </div><!-- fin form receta -->
+   <div>
+      <h3>Recetas añadidas</h3>
+      <table id="tableRecetas">
+         <!--<tr id="trec-1" data-id="12">
+            <td>Desc: aspirina</td><td><button class="btnRemoveReceta" data-id="1">Quitar</button></td>
+         </tr>-->
+      </table>
+   </div>
+</div><!-- fin receta -->
 
 <hr>
 
