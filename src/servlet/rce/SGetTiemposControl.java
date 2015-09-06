@@ -7,11 +7,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.RceStub;
-import bussines.RceStub.ObtenerCierre_destino;
-import bussines.RceStub.ObtenerCierre_destinoResponse;
-import bussines.RceStub.ObtenerTiempo_control;
-import bussines.RceStub.ObtenerTiempo_controlResponse;
+import servicios.RceStub;
+/*
+import servicios.RceStub.ObtenerCierre_destino;
+import servicios.RceStub.ObtenerCierre_destinoResponse;
+import servicios.RceStub.ObtenerTiempo_control;
+import servicios.RceStub.ObtenerTiempo_controlResponse;
+*/
 
 /**
  * Servlet implementation class SGetTiemposControl
@@ -33,10 +35,13 @@ public class SGetTiemposControl extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RceStub rce = new RceStub();
+		/*
 		ObtenerTiempo_control stGetTiemposControl = new ObtenerTiempo_control();
 		ObtenerTiempo_controlResponse res = rce.obtenerTiempo_control(stGetTiemposControl);
 		
 		response.getWriter().append(res.get_return());
+		*/
+		response.getWriter().append("[]");
 	}
 
 }

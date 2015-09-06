@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.RceStub;
-import bussines.RceStub.ObtenerCierre_tipo;
-import bussines.RceStub.ObtenerCierre_tipoResponse;
-import bussines.RceStub.ObtenerDiagnostico;
-import bussines.RceStub.ObtenerDiagnosticoResponse;
+import servicios.RceStub;
+//import servicios.RceStub.ObtenerCierre_tipo;
+//import servicios.RceStub.ObtenerCierre_tipoResponse;
+import servicios.RceStub.ObtenerDiagnosticos;
+import servicios.RceStub.ObtenerDiagnosticosResponse;
 
 /**
  * Servlet implementation class SGetTiposCierre
@@ -33,10 +33,13 @@ public class SGetTiposCierre extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RceStub rce = new RceStub();
+		/*
 		ObtenerCierre_tipo stGetTiposCierre = new ObtenerCierre_tipo();
 		ObtenerCierre_tipoResponse res = rce.obtenerCierre_tipo(stGetTiposCierre);
 		
 		response.getWriter().append(res.get_return());
+		*/
+		response.getWriter().append("[]");
 	}
 
 }

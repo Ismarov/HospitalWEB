@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.RceStub;
-import bussines.RceStub.ObtenerProcedimiento;
-import bussines.RceStub.ObtenerProcedimientoResponse;
+import servicios.RceStub;
+import servicios.RceStub.ObtenerProcedimientos;
+import servicios.RceStub.ObtenerProcedimientosResponse;
 
 /**
  * Servlet implementation class SGetProcedimientos
@@ -31,8 +31,8 @@ public class SGetProcedimientos extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RceStub rce = new RceStub();
-		ObtenerProcedimiento stGetProcedimientos = new ObtenerProcedimiento();
-		ObtenerProcedimientoResponse res = rce.obtenerProcedimiento(stGetProcedimientos);
+		ObtenerProcedimientos stGetProcedimientos = new ObtenerProcedimientos();
+		ObtenerProcedimientosResponse res = rce.obtenerProcedimientos(stGetProcedimientos);
 		
 		response.getWriter().append(res.get_return());
 	}

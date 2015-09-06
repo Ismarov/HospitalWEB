@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.PacienteStub;
-import bussines.PacienteStub.ObtenerEspecialidad;
-import bussines.PacienteStub.ObtenerEspecialidadResponse;
+import servicios.PacienteStub;
+import servicios.PacienteStub.ObtenerEspecialidades;
+import servicios.PacienteStub.ObtenerEspecialidadesResponse;
 
 /**
  * Servlet implementation class ObtenerEspecialidades
@@ -33,9 +33,9 @@ public class SObtenerEspecialidades extends HttpServlet {
 		
 		PacienteStub pSt = new PacienteStub();
 		
-		ObtenerEspecialidad stObtenerEsp = new ObtenerEspecialidad();
+		ObtenerEspecialidades stObtenerEsp = new ObtenerEspecialidades();
 		
-		ObtenerEspecialidadResponse obtenerEspResponse = pSt.obtenerEspecialidad(stObtenerEsp);
+		ObtenerEspecialidadesResponse obtenerEspResponse = pSt.obtenerEspecialidades(stObtenerEsp);
 		
 		String s =  obtenerEspResponse.get_return();
 		

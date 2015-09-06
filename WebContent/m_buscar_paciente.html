@@ -6,17 +6,40 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/hospital/hosp_page_params.js"></script>
 	<script src="js/hospital/m_buscar_paciente.js"></script>
+	<link rel="stylesheet" href="css/pure/pure-min.css">
+   	<link rel="stylesheet" href="css/pure/grids-responsive-min.css">
+   	<link rel="stylesheet" href="css/layouts/side-menu.css">
 </head>
 <body>
+<div id="layout">
+            <!-- Menu toggle -->
+            <a href="#menu" id="menuLink" class="menu-link">
+                <!-- Hamburger icon -->
+                <span></span>
+            </a>
+            <div id="menu">
+                <div class="pure-menu">
+                    <a class="pure-menu-heading" href="m_index.html">Médico</a>
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="m_buscar_paciente.html" class="pure-menu-link">Buscar Paciente</a></li>
+                        <li class="pure-menu-item"><a href="m_ver_horas_paciente.html" class="pure-menu-link">Ver horas paciente</a></li>
+                        <li class="pure-menu-item"><a href="m_ingresar_rce.html" class="pure-menu-link">Ingresar RCE</a></li>
+                        <li class="pure-menu-item"><a href="m_hce.html" class="pure-menu-link">Consultar HCE</a></li>
+                        <li class="pure-menu-item"><a href="m_consulta_reserva.html" class="pure-menu-link">Consultar Horas Reservadas</a></li>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-<form id="form_paciente">
+<form id="form_paciente" class="pure-form pure-form-stacked">
 	<label for="paciente_rut">RUN del Paciente:</label>
 	<input id="paciente_rut" name="rut" >
 </form>
 
-<button id="btnBuscar">Buscar</button>
-
-<table id="table_paciente">
+<button id="btnBuscar" class="pure-button">Buscar</button>
+<hr>
+<table id="table_paciente" class="pure-table">
 	<thead>
 		<tr>
 			<td>#</td>
@@ -30,6 +53,6 @@
 		<!---->
 	</tbody>
 </table>
-
+<script src="js/ui.js"></script>
 </body>
 </html>

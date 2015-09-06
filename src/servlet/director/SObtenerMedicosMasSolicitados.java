@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.DirectorStub;
-import bussines.DirectorStub.ObtenerMedicoMasSolicitado;
-import bussines.DirectorStub.ObtenerMedicoMasSolicitadoResponse;
+import servicios.DirectorStub;
+import servicios.DirectorStub.ObtenerMedicoMasSolicitado;
+import servicios.DirectorStub.ObtenerMedicoMasSolicitadoResponse;
 
 
 /**

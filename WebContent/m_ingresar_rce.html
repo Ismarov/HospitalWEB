@@ -6,67 +6,89 @@
    <script src="js/jquery.js"></script>
    <script src="js/hospital/hosp_page_params.js"></script>
    <script src="js/hospital/m_rce.js"></script>
+   <link rel="stylesheet" href="css/pure/pure-min.css">
+   <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
+   <link rel="stylesheet" href="css/layouts/side-menu.css">
 </head>
 <body>
+            <div id="layout">
+            <!-- Menu toggle -->
+            <a href="#menu" id="menuLink" class="menu-link">
+                <!-- Hamburger icon -->
+                <span></span>
+            </a>
+            <div id="menu">
+                <div class="pure-menu">
+                    <a class="pure-menu-heading" href="m_index.html">Médico</a>
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="m_buscar_paciente.html" class="pure-menu-link">Buscar Paciente</a></li>
+                        <li class="pure-menu-item"><a href="m_ver_horas_paciente.html" class="pure-menu-link">Ver horas paciente</a></li>
+                        <li class="pure-menu-item"><a href="m_ingresar_rce.html" class="pure-menu-link">Ingresar RCE</a></li>
+                        <li class="pure-menu-item"><a href="m_hce.html" class="pure-menu-link">Consultar HCE</a></li>
+                        <li class="pure-menu-item"><a href="m_consulta_reserva.html" class="pure-menu-link">Consultar Horas Reservadas</a></li>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
 
 <h3>Registro Clínico</h3>
 
-<form id="form_rce">
+<form id="form_rce" class="pure-form pure-form-stacked">
+    <fieldset>
+        <legend>Formulario</legend>
 
-   <input type="hidden" id="id" name="id" value="0" >
-   <input type="hidden" id="encounter_uuid" name="encounter_uuid" value="0" >
+        <input id="id" type="hidden" value="0">
+        <input id="encounter_uuid" type="hidden" value="0">
 
-   <label for"alergias">Alergias</label><br>
-   <textarea type="" id="alergias" name="alergias" ></textarea>
-   <br>
-   <label for"anamnesis">Anamnesis</label><br>
-   <textarea type="" id="anamnesis" name="anamnesis" ></textarea>
-   <br>
-   <label for"motivo">Motivo</label><br>
-   <textarea type="" id="motivo" name="motivo" ></textarea>
-   <br>
-   <label for"examen_fisico">Examen físico</label><br>
-   <textarea type="" id="examen_fisico" name="examen_fisico" ></textarea>
-   <br>
-   <label for"indicador_medico">Indicador Médico</label><br>
-   <textarea type="" id="indicador_medico" name="indicador_medico" ></textarea>
-   <br>
-   <label for"indicador_cierre">Indicador Cierre</label><br>
-   <textarea type="" id="indicador_cierre" name="indicador_cierre" ></textarea>
-   <br>
-   <label for"hipotesis">Hipotesis</label><br>
-   <textarea type="" id="hipotesis" name="hipotesis" ></textarea>
-   <br>
-   <label for"detalle_ges">Detalle GES</label><br>
-   <textarea type="" id="detalle_ges" name="detalle_ges" ></textarea>
-   <br>
-   <!--label for"horamedica_id">ID Hora Médica</label><br-->
-   <input type="hidden" id="horamedica_id" name="horamedica_id" value="" >
-   <br>
-   <!--label for"receta_id">ID Receta</label><br-->
-   <input type="hidden" id="receta_id" name="receta_id" value="0" >
-   <br>
-   <label for"diagnostico_id">Diagnostico</label><br>
-   <select id="diagnostico_id" name="diagnostico_id"></select>
-   <br>
-   <label for"procedimiento_id">Procedimiento</label><br>
-   <select id="procedimiento_id" name="procedimiento_id"></select>
-   <br>
-   <label for"actividad_id">Actividad</label><br>
-   <select id="actividad_id" name="actividad_id"></select>
-   <br>
-   <!--label for"paciente_id">ID Paciente</label><br-->
-   <input type="hidden" id="paciente_id" name="paciente_id" value="" >
-   <br>
-   <!--label for"lCertificados">lCertificados</label><br-->
-   <input type="hidden" id="lCertificados" name="lCertificados" value="[]" >
-   <br>
+        <label for"alergias">Alergias</label><br>
+            <textarea type="" id="alergias" name="alergias" ></textarea>
+            <br>
+            <label for"anamnesis">Anamnesis</label><br>
+            <textarea type="" id="anamnesis" name="anamnesis" ></textarea>
+            <br>
+            <label for"motivo">Motivo</label><br>
+            <textarea type="" id="motivo" name="motivo" ></textarea>
+            <br>
+            <label for"examen_fisico">Examen físico</label><br>
+            <textarea type="" id="examen_fisico" name="examen_fisico" ></textarea>
+            <br>
+            <label for"indicador_medico">Indicador Médico</label><br>
+            <textarea type="" id="indicador_medico" name="indicador_medico" ></textarea>
+            <br>
+            <label for"indicador_cierre">Indicador Cierre</label><br>
+            <textarea type="" id="indicador_cierre" name="indicador_cierre" ></textarea>
+            <br>
+            <label for"hipotesis">Hipotesis</label><br>
+            <textarea type="" id="hipotesis" name="hipotesis" ></textarea>
+            <br>
+            <label for"detalle_ges">Detalle GES</label><br>
+            <textarea type="" id="detalle_ges" name="detalle_ges" ></textarea>
+            <br>
+            <input type="hidden" id="horamedica_id" name="horamedica_id" value="" >
+            <br>
+            <input type="hidden" id="receta_id" name="receta_id" value="0" >
+            <br>
+            <label for"diagnostico_id">Diagnostico</label><br>
+            <select id="diagnostico_id" name="diagnostico_id"></select>
+            <br>
+            <label for"procedimiento_id">Procedimiento</label><br>
+            <select id="procedimiento_id" name="procedimiento_id"></select>
+            <br>
+            <label for"actividad_id">Actividad</label><br>
+            <select id="actividad_id" name="actividad_id"></select>
+            <br>
+
+            <input type="hidden" id="paciente_id" name="paciente_id" value="" >
+            <br>
+
+            <input type="hidden" id="lCertificados" name="lCertificados" value="[]" >
+            <br>
+    </fieldset>
 </form>
-
 <hr>
-
-<form id="form_receta">
-   <div><!-- receta -->
+<form id="form_receta" class="pure-form pure-form-stacked">
+<div><!-- receta -->
       <h3>Receta</h3>
       <div>
          Tipo Paciente y Tipo Medicamento
@@ -108,11 +130,9 @@
       </div>
    </div><!-- fin receta -->
 </form>
-
 <hr>
-
-<form id="form_certificado">
-   <div><!-- Certificado -->
+<form id="form_certificado" class="pure-form pure-form-stacked">
+<div><!-- Certificado -->
       <h3>Certificados</h3>
       <div>
          <table>
@@ -208,11 +228,11 @@
       </div>
    </div> <!-- fin certificado -->
 </form>
-
 <hr>
 
-<button id="btnIngresar">Crear Registro</button>
+<button id="btnIngresar" class="pure-button">Crear Registro</button>   
 
+<script src="js/ui.js"></script>
 </body>
 </html>
 

@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.PacienteStub;
-import bussines.PacienteStub.ObtenerHorasPaciente;
-import bussines.PacienteStub.ObtenerHorasPacienteResponse;
+import servicios.PacienteStub;
+import servicios.PacienteStub.ObtenerHorasPaciente;
+import servicios.PacienteStub.ObtenerHorasPacienteResponse;
 
 /**
  * Servlet implementation class SObtenerHorasPaciente

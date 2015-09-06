@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.DirectorStub;
-import bussines.DirectorStub.ObtenerPacientesMasAtendido;
-import bussines.DirectorStub.ObtenerPacientesMasAtendidoResponse;
+import servicios.DirectorStub;
+import servicios.DirectorStub.ObtenerPacientesMasAtendido;
+import servicios.DirectorStub.ObtenerPacientesMasAtendidoResponse;
 
 /**
  * Servlet implementation class ObtenerPacientesMasAtendidos
