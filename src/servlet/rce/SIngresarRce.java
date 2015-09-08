@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.RceStub;
-import bussines.RceStub.IngresarRce;
-import bussines.RceStub.IngresarRceResponse;
+import servicios.RceStub;
+import servicios.RceStub.IngresarRce;
+import servicios.RceStub.IngresarRceResponse;
 
 /**
  * Servlet implementation class SIngresarRce
@@ -41,17 +41,16 @@ public class SIngresarRce extends HttpServlet {
 		String hipotesis		=	request.getParameter("hipotesis");
 		String detalle_ges		=	request.getParameter("detalle_ges");
 		int horamedica_id		=	request.getParameter("horamedica_id") != null ? Integer.parseInt(request.getParameter("horamedica_id")) : 0;
-		int receta_id			=	request.getParameter("receta_id") != null ? Integer.parseInt(request.getParameter("receta_id")) : 0;
+		String receta_json		=	request.getParameter("receta_json");
 		int diagnostico_id		=	request.getParameter("diagnostico_id") != null ? Integer.parseInt(request.getParameter("diagnostico_id")) : 0;
-		int procedimiento_id	=	request.getParameter("procedimiento_id") != null ? Integer.parseInt(request.getParameter("procedimiento_id")) : 0;
-		int actividad_id		=	request.getParameter("actividad_id") != null ? Integer.parseInt(request.getParameter("actividad_id")) : 0;
-		int paciente_id			=	request.getParameter("paciente_id") != null ? Integer.parseInt(request.getParameter("paciente_id")) : 0;
+		String lprocedimientos	=	request.getParameter("lprocedimiento_id");
+		String lactividades		=	request.getParameter("lactividad_id");
+		int paciente_id		=	request.getParameter("paciente_id") != null ? Integer.parseInt(request.getParameter("paciente_id")) : 0;
 		String lCertificados	=	request.getParameter("lCertificados");
 		
-		log("receta_id = "+receta_id);
 		
-		if( /*id != 0 && */receta_id != 0 && paciente_id != 0 && diagnostico_id != 0 && procedimiento_id != 0 && actividad_id != 0){
-			if(/*encounter_uuid != null && */alergias != null && anamnesis != null && motivo != null && examen_fisico != null && indicador_medico != null && indicador_cierre != null && hipotesis != null && detalle_ges != null && lCertificados != null ){
+		if( /*id != 0 && */diagnostico_id != 0 && paciente_id != 0 && horamedica_id != 0){
+			if(/*encounter_uuid != null && */lprocedimientos != null && lactividades != null && receta_json != null && alergias != null && anamnesis != null && motivo != null && examen_fisico != null && indicador_medico != null && indicador_cierre != null && hipotesis != null && lCertificados != null ){
 				RceStub rse = new RceStub();
 				IngresarRce stRce = new IngresarRce();
 				stRce.setId(0);
@@ -65,27 +64,12 @@ public class SIngresarRce extends HttpServlet {
 				stRce.setHipotesis(hipotesis);
 				stRce.setDetalle_ges(detalle_ges);
 				stRce.setHoramedica_id(horamedica_id);
-				stRce.setReceta_id(receta_id);
+				stRce.setReceta_json(receta_json);
 				stRce.setDiagnostico_id(diagnostico_id);
-				stRce.setProcedimiento_id(procedimiento_id);
-				stRce.setActividad_id(actividad_id);
+				stRce.setLprocedimiento_id(parseJsonIntArr(lprocedimientos));
+				stRce.setLactividad_id(parseJsonIntArr(lactividades));
 				stRce.setPaciente_id(paciente_id);
-				
-				
-				lCertificados = lCertificados.replace("[", "");
-				lCertificados = lCertificados.replace("]", "");
-				lCertificados = lCertificados.replace("%5B", "");
-				lCertificados = lCertificados.replace("%5D", "");
-				lCertificados = lCertificados.replace("%2C", ",");
-				String[] certs = lCertificados.split(",");
-				
-				int[] icerts = new int[certs.length]; 
-				if(!certs.equals("")){
-					for (int i = 0; i < certs.length; i++) {
-						icerts[i] = Integer.parseInt(certs[i]);
-					}
-				}
-				stRce.setLCertificados(icerts);
+				stRce.setLCertificados(parseJsonIntArr(lCertificados));
 							
 				IngresarRceResponse res = rse.ingresarRce(stRce);
 				response.getWriter().append(res.get_return());
@@ -101,5 +85,28 @@ public class SIngresarRce extends HttpServlet {
 			response.getWriter().append("null");
 		}
 	}
+	
+	private int[] parseJsonIntArr(String json_str){
+		json_str = json_str.replace("[", "");
+		json_str = json_str.replace("]", "");
+		json_str = json_str.replace("%5B", "");
+		json_str = json_str.replace("%5D", "");
+		json_str = json_str.replace("%2C", ",");
+		String[] s_arr = json_str.split(",");
+		
+		int[] iarr = new int[s_arr.length];
+		
+		if(!iarr.equals("")){
+			for (int i = 0; i < iarr.length; i++) {
+				try{
+					iarr[i] = Integer.parseInt(s_arr[i]);
+				}
+				catch(NumberFormatException ex){
+					ex.printStackTrace();
+				}
+			}
+		}
+		return iarr;
+	} 
 
 }

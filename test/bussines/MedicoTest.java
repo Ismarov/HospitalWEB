@@ -101,15 +101,15 @@
 
                 stub.startreservarHoraMedicaControl(
                          reservarHoraMedicaControl10,
-                    new tempCallbackN65589()
+                    new tempCallbackN65604()
                 );
               
 
 
         }
 
-        private class tempCallbackN65589  extends bussines.MedicoCallbackHandler{
-            public tempCallbackN65589(){ super(null);}
+        private class tempCallbackN65604  extends bussines.MedicoCallbackHandler{
+            public tempCallbackN65604(){ super(null);}
 
             public void receiveResultreservarHoraMedicaControl(
                          bussines.MedicoStub.ReservarHoraMedicaControlResponse result
