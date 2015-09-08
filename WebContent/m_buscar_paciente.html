@@ -1,35 +1,87 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Buscar paciente</title>
-	<meta content="text/html" charset="utf-8">
-	<script src="js/jquery.js"></script>
-	<script src="js/hospital/hosp_page_params.js"></script>
-	<script src="js/hospital/m_buscar_paciente.js"></script>
-</head>
-<body>
-
-<form id="form_paciente">
-	<label for="paciente_rut">RUN del Paciente:</label>
-	<input id="paciente_rut" name="rut" >
-</form>
-
-<button id="btnBuscar">Buscar</button>
-
-<table id="table_paciente">
-	<thead>
-		<tr>
-			<td>#</td>
-			<td>Nombres</td>
-			<td>Apellidos</td>
-			<td>Ver reserva</td>
-			<td>Ver HCE</td>
-		</tr>
-	</thead>
-	<tbody>
-		<!---->
-	</tbody>
-</table>
-
-</body>
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
+    <title>Sistema de Registro Hospital San Carlos</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/hospital/hosp_page_params.js"></script>
+    <script src="js/hospital/m_buscar_paciente.js"></script>
+  </head>
+  <body>
+    
+    <div class="row">
+      <div class="large-3 columns">
+        <h1><img src="img/banner.jpg"/></h1>
+      </div>
+      <div class="large-9 columns">
+        <ul class="inline-list right">
+          <li><a href="paciente.html" class="small button">Paciente</a></li>
+          <li><a href="medico.html" class="small button">Médico</a></li>
+          <li><a href="director.html" class="small button">Director</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Inicio Layout Formulario
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="row">
+      <div class="large-9 push-3 columns">
+        <div class="row">
+          <form id="form_paciente">
+            <label for="paciente_rut">RUT del Paciente:</label>
+            <input id="paciente_rut" name="rut" >
+          </form>
+          <button id="btnBuscar">Buscar</button>
+          <table id="table_paciente">
+            <thead>
+              <tr>
+                <td>#</td>
+                <td>Nombres</td>
+                <td>Apellidos</td>
+                <td>Ver reserva</td>
+                <td>Ver HCE</td>
+              </tr>
+            </thead>
+            <tbody>
+              <!---->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Fin Layout Formulario
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      
+      <div class="large-3 pull-9 columns">
+        <ul class="side-nav">
+          <li><a href="form_m_buscar_paciente.html" class="small button">Registro Clínico Electrónico</a></li>
+        </ul>
+        
+        <img src="img/minsal.jpg"/>
+        <h3><small>Ministerio de Salud</small></h3>
+        <img src="img/omrs.jpg"/>
+        <h3><small>© OpenMRS</small></h3>
+      </div>
+      
+    </div>
+    
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+          <div class="large-6 columns">
+            <p>© Matías Barrera García. Proyecto de Desarrollo de Software.</p>
+          </div>
+          <div class="large-6 columns">
+            <ul class="inline-list right">
+              <li><a href="http://www.ufro.cl/">Universidad de La Frontera</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
