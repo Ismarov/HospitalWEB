@@ -71,18 +71,34 @@ function procesarHce(hce){
 					html += "<tr> <td><h3>Hipotesis</h3></td> <td>"+hce[i].hipotesis+"</td> </tr>";
 					html += "<tr> <td><h3>Detalle GES</h3></td> <td>"+hce[i].detalle_ges+"</td> </tr>";
 					html += "<tr> <td><h2>Diagnostico</h2></td> <td>"+hce[i].diagnostico.desc+"</td> </tr>";
-					html += "<tr> <td><h2>Receta</h2></td> <td>"+hce[i].receta.desc+"</td> </tr>";
-					html += "<tr> <td><h3>GES</h3></td> <td>";
-						if(hce[i].receta.paciente_ges == 1)
-							html += "Paciente GES ";
-						if(hce[i].receta.paciente_cronico == 1)
-							html += "Cronico ";
-						if(hce[i].receta.patologia_ges == 1)
-							html += "Patologia GES ";
-					html +="</td> </tr>";
-					html += "<tr> <td><h2>Diagnostico</h2></td> <td>"+hce[i].diagnostico.desc+"</td> </tr>";
-					html += "<tr> <td><h2>Procedimiento</h2></td> <td>"+hce[i].procedimiento.desc+"</td> </tr>";
-					html += "<tr> <td><h2>Actividad</h2></td> <td>"+hce[i].actividad.desc+"</td> </tr>";
+
+					// Iterar sobre las recetas
+					for(var r=0; r<hce[i].receta.length; r++){
+						html += "<tr> <td><h2>Receta</h2></td> <td>"+hce[i].receta[r].desc+"</td> </tr>";
+						html += "<tr> <td><h4>GES:</h4></td> <td>";
+							if(hce[i].receta[r].paciente_ges == 1)
+								html += "Paciente GES ";
+							if(hce[i].receta[r].paciente_cronico == 1)
+								html += "Cronico ";
+							if(hce[i].receta[r].patologia_ges == 1)
+								html += "Patologia GES ";
+							if( hce[i].receta[r].paciente_ges == 0 && hce[i].receta[r].paciente_cronico == 0 && hce[i].receta[r].patologia_ges == 0 )
+								html += " - Receta sin detalles GES - ";
+						html +="</td> </tr>";
+					}
+					// Fin recetas
+					
+					//html += "<tr> <td><h2>Diagnostico</h2></td> <td>"+hce[i].diagnostico.desc+"</td> </tr>";
+					
+					// Iterar sobre Procedimientos
+					for(var p=0; p<hce[i].procedimiento.length; p++){
+						html += "<tr> <td><h2>Procedimiento: </h2></td> <td>"+hce[i].procedimiento[p].desc+"</td> </tr>";
+					}
+					// Fin procedimientos
+					// Iterar sobre actividades
+					for(var a=0; a<hce[i].actividad.length; a++){
+						html += "<tr> <td><h2>Actividad: </h2></td> <td>"+hce[i].actividad[a].desc+"</td> </tr>";
+					}
 					html += "<tr> <td><h3>Indicador Medico</h3></td> <td>"+hce[i].indicador_medico+"</td> </tr>";
 					html += "<tr> <td><h3>Indicador Cierre</h3></td> <td>"+hce[i].indicador_cierre+"</td> </tr>";
 				html += "<table>";

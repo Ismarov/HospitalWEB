@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.RceStub;
-import bussines.RceStub.ObtenerDiagnostico;
-import bussines.RceStub.ObtenerDiagnosticoResponse;
+import servicios.RceStub;
+import servicios.RceStub.ObtenerDiagnosticos;
+import servicios.RceStub.ObtenerDiagnosticosResponse;
 
 /**
  * Servlet implementation class SGetDiagnosticos
@@ -31,8 +31,8 @@ public class SGetDiagnosticos extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RceStub rce = new RceStub();
-		ObtenerDiagnostico stGetDiagnosticos = new ObtenerDiagnostico();
-		ObtenerDiagnosticoResponse res = rce.obtenerDiagnostico(stGetDiagnosticos);
+		ObtenerDiagnosticos stGetDiagnosticos = new ObtenerDiagnosticos();
+		ObtenerDiagnosticosResponse res = rce.obtenerDiagnosticos(stGetDiagnosticos);
 		
 		response.getWriter().append(res.get_return());
 	}

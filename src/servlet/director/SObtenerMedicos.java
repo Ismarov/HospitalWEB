@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.DirectorStub;
-import bussines.DirectorStub.*;
+import servicios.DirectorStub;
+import servicios.DirectorStub.*;
 
 /**
  * Servlet implementation class ObtenerMedico
@@ -30,9 +30,9 @@ public class SObtenerMedicos extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		DirectorStub dSt = new DirectorStub();
-		ObtenerMedico obtMedico = new ObtenerMedico();
+		ObtenerMedicos obtMedico = new ObtenerMedicos();
 		
-		ObtenerMedicoResponse respObtMedico = dSt.obtenerMedico(obtMedico);
+		ObtenerMedicosResponse respObtMedico = dSt.obtenerMedicos(obtMedico);
 		
 		String s =  respObtMedico.get_return();
 		

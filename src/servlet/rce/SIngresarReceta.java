@@ -7,11 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.RceStub;
-import bussines.RceStub.IngresarRceResponse;
-import bussines.RceStub.IngresarReceta;
-import bussines.RceStub.IngresarRecetaResponse;
-
+import servicios.RceStub;
+import servicios.RceStub.IngresarRceResponse;
+/*
+import servicios.RceStub.IngresarReceta;
+import servicios.RceStub.IngresarRecetaResponse;
+*/
 /**
  * Servlet implementation class SIngresarReceta
  */
@@ -36,7 +37,7 @@ public class SIngresarReceta extends HttpServlet {
 		byte p_cron = request.getParameter("p_cron") != null ? (byte)Integer.parseInt(request.getParameter("p_cron")) : -1;
 		byte p_ges = request.getParameter("p_ges") != null ? (byte)Integer.parseInt(request.getParameter("p_ges")) : -1;
 		byte p_pges = request.getParameter("p_pges") != null ? (byte)Integer.parseInt(request.getParameter("p_pges")) : -1;
-		
+	/*	
 		if( p_cron >= 0 && p_ges >= 0 && p_pges >= 0 && desc != null){
 			RceStub rce = new RceStub();
 			IngresarReceta stReceta = new IngresarReceta();
@@ -52,7 +53,7 @@ public class SIngresarReceta extends HttpServlet {
 			log("ingresarReceta: faltan parametros");
 			response.getWriter().append("null");
 		}
-		
+	*/
 	}
 
 }

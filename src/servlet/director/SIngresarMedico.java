@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bussines.DirectorStub;
-import bussines.PacienteStub;
-import bussines.DirectorStub.IngresarMedico;
-import bussines.DirectorStub.IngresarMedicoResponse;
-import bussines.PacienteStub.ReservarHoraAps;
-import bussines.PacienteStub.ReservarHoraApsResponse;
+import servicios.DirectorStub;
+import servicios.PacienteStub;
+import servicios.DirectorStub.IngresarMedico;
+import servicios.DirectorStub.IngresarMedicoResponse;
+import servicios.PacienteStub.ReservarHoraAps;
+import servicios.PacienteStub.ReservarHoraApsResponse;
 
 /**
  * Servlet implementation class SIngresarMedico
