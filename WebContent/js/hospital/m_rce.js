@@ -56,14 +56,17 @@ $(document).ready(function(){
 	});
 
 	$("#btnAddProcedimiento").click(function(){
+		event.preventDefault();
 		anadirProcedimiento();
 	});
 
 	$("#btnAddActividad").click(function(){
+		event.preventDefault();
 		anadirActividad();
 	});
 
 	$("#btnAddReceta").click(function(){
+		event.preventDefault();
 		anadirReceta();
 	});
 	
@@ -175,7 +178,7 @@ function eliminarActividad(elem){
 function eliminarReceta(elem){
 	var id = $(elem).data('id');
 	//quitar fila de la tabla
-	$("#trec-"+row).remove();
+	$("#trec-"+id).remove();
 	buildDataRecetaJson();
 }
 
