@@ -23,7 +23,21 @@ $(document).ready(function(){
 		}
 	});
 
+	/*
+	$("form_paciente").submit(function (e) {
+		e.preventDefault();
+		$("#btnBuscar").click();
+	});*/
+
+	$("#paciente_rut").on("keypress", function(event) {
+	    if (event.keyCode == 13) {
+	        event.preventDefault();
+	        $("#btnBuscar").click();
+	    }
+	});
+
 });
+
 
 function llenarTabla(paciente){
 	var row = "";
